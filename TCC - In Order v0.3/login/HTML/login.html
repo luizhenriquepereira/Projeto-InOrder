@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/login.css">
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
+    <title>Entrar - InOrder</title>
+</head>
+<body>
+    
+    <section class="outerBox">
+
+        <section class="loginBox"> 
+           
+            <img class="logoLogin" src="../IMAGENS/logo.png" alt="">
+    
+            <h1>FAZER LOGIN</h1>
+    
+            <form action="#" method="post">
+    
+                <input type="text" name="user" placeholder="E-MAIL,CPF OU USUÁRIO" required> <br>
+                <input type="password" name="password" id="password" placeholder="SENHA" required> <br>
+                
+                <a href="cardapio.html"><input type="button" name="Envia" value="ENTRAR"></a>
+    
+                <img id="olho" src="../IMAGENS/eye-regular.svg" class="eye"></img>
+                
+            </form>
+    
+            <a class="link" href="forgot.html">Esqueceu a senha?</a>
+    
+            <hr class="grayLine">
+    
+            <p class="grayText">Novo por aqui? <a href="cadastro1.html" class="link">Cadastre-se</a> </p>
+            
+        </section>
+
+    </section>
+
+
+
+    <script>
+
+        let btn = document.querySelector('.eye');
+
+        btn.addEventListener('click', function() {
+
+            let input = document.querySelector('#password');
+
+            if(input.getAttribute('type') == 'password') {
+                input.setAttribute('type', 'text');
+                document. getElementById('olho').src = "../IMAGENS/eye-slash-regular-formated.png";
+
+            } 
+            else {
+                input.setAttribute('type', 'password');
+                document. getElementById('olho').src = "../IMAGENS/eye-regular-formated.png";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

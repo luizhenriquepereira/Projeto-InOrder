@@ -1,0 +1,268 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+
+    --backgroundColor: rgba(0, 0, 0, 0.801);
+    --orangeColorOne: #ff6200;
+    --orangeColorTwo: #ff8a05;
+
+
+}
+
+body{
+
+    font-family:'Geologica', sans-serif;;
+    background-color: var(--backgroundColor);
+    color:black;
+
+}
+
+h1{
+
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+
+}
+
+header{
+
+    background-image: linear-gradient(to top, #ff6200, #ff8a05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+
+}
+
+.headerBox{
+
+    
+    display: inline-block;
+
+}
+
+#navBox{
+
+    display: block;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+
+}
+
+img{
+
+    margin: 20px;
+
+}
+
+#imagemPerfil{
+
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#imagemNotificacao{
+
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+#navBox > nav > span > a{
+
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;;
+    padding-bottom: 35px;
+
+}
+
+#navBox > nav > span > a:hover{
+
+    font-weight: bold;
+
+}
+
+#navBox > nav > span > #currentPlace{
+
+    border-bottom: solid 2px white;
+
+}
+
+#navBox > nav > span{
+
+    padding: 12px 0px;
+    border-radius: 7px;
+
+}
+
+main{
+
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+}
+
+main h1{
+
+    margin-bottom: 10px;
+
+}
+
+main h2{
+
+    text-align: center;
+    color: white;
+    margin: 10px;
+
+}
+
+main  table{
+
+    margin: auto;
+    margin-top: 20px;
+
+    border-collapse: collapse;
+    background-color: white;
+
+    border: solid 2px var(--orangeColorOne);
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.452);
+
+}
+
+.inputNumber{
+
+    width: 40px;
+    margin-left: 20px;
+    text-align: center;
+
+}
+
+.imageCell{
+
+    padding: 5px;
+    cursor: pointer;
+
+}
+
+.imageCell > span{
+
+    color: #ff6200;
+
+}
+
+td, th{
+
+    border: solid 1px var(--orangeColorTwo);
+    width: 90px;
+    padding: 10px;
+
+}
+
+#close:hover{
+
+    transition: 0.5s;
+    color: red;
+
+}
+
+#tableRestaurant:hover{
+
+    transition: 0.5s;
+    color: gray;
+
+}
+
+
+main .tableSelector{
+
+    max-width: 350px;
+    height: 350px;
+    background-color: white;
+
+    margin: auto;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.438);
+
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    z-index: 10;
+    display: none;
+
+    overflow-y: auto;
+
+}
+
+main #tableSelectorCloser{
+
+    display: none;
+
+    max-width: 390px;
+    height: 30px;
+    margin: auto;
+
+    background-color: var(--orangeColorOne);
+
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+    text-align: center;
+
+}
+
+#downArrow{
+
+    cursor: pointer;
+
+    line-height: 30px;
+    color: white;
+
+}
+
+.tableSelector h1{
+
+    color: var(--orangeColorOne);
+    margin-bottom: 20px;
+
+}
+
+.gridContainer{
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+}
+
+.gridItem{
+
+    align-items: flex-start;
+
+    border: solid 2px var(--orangeColorOne);
+    margin: auto;
+    height: 50px;
+    width: 50px;
+
+    text-align: center;
+    font-size: 2em;
+    line-height: 50px;
+
+    cursor: pointer;
+
+}
+
+

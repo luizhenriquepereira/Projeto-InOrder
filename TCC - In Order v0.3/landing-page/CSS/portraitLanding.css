@@ -1,0 +1,72 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+@media screen and (max-width: 922px) {
+ 
+    header ul{
+
+        display: none;
+
+    }
+
+    header #logo{
+
+        position: absolute;
+        left: 50px;
+        
+    }
+
+    header #burguer{
+
+        display: block;
+        font-size: 50px;
+
+        position: absolute;
+        right: 50px;
+
+    }
+
+    .sided{
+
+        display: block;
+
+    }
+
+    main h1{
+
+        font-size: 1em;
+
+    }
+
+    #cook{
+        
+        height: 80vw;
+        margin-top: 40px;
+        margin-left: 50px;
+
+    }
+
+    main{
+
+        margin-top: 50px;
+
+    }
+
+    main article{
+
+        width: 80%;
+
+    }
+    
+    main aside{
+
+        width: 80%;
+    
+    }
+
+}
+

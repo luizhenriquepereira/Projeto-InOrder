@@ -1,0 +1,123 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+
+    --backgroundcolor: rgba(0, 0, 0, 0.801);
+
+}
+
+body{
+
+    font-family: 'Calibri', sans-serif;
+    background-color: var(--backgroundcolor);
+    color: white;
+
+}
+
+header{
+
+    background-image: linear-gradient(to top, #ff6200, #ff8a05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+
+    height: 70px;
+
+    display: flex;
+
+}
+
+#perfil{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+
+    line-height: 70px;
+    margin-left: 10px;
+
+}
+
+#config{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+
+    line-height: 70px;
+    margin-right: 10px;
+
+}
+
+#navBox{
+
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+
+}
+
+img{
+
+    margin: 20px;
+
+}
+
+#imagemPerfil{
+
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#imagemNotificacao{
+
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+#navBox > nav > span > a{
+
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;;
+    padding-bottom: 25px;
+
+}
+
+#navBox > nav > span > a:hover{
+
+    font-weight: bold;
+
+}
+
+#navBox > nav > span > #currentPlace{
+
+    border-bottom: solid 2px white;
+
+}
+
+#navBox > nav > span{
+
+    padding: 12px 0px;
+    border-radius: 7px;
+
+}
+
+main{
+
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+
+}

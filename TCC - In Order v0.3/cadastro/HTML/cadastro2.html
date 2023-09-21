@@ -1,0 +1,72 @@
+!<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
+    <title>Cadastro - InOrder</title>
+</head>
+<body>
+    
+    <section class="outerBox">
+
+        <section class="loginBox"> 
+           
+            <img class="logoLogin" src="../IMAGENS/logo-200.png" alt="">
+    
+            <h1>DADOS PESSOAIS</h1>
+    
+            <form action="#" method="post">
+    
+                <input type="text" name="user" placeholder="NOME COMPLETO" required> <br>
+                <input type="text" name="user" placeholder="CPF" required> <br>
+                <input type="password" name="password" id="password" placeholder="NÚMERO DE TELEFONE" 
+                required> 
+                <input type="password" name="password" id="password" placeholder="RAZÃO SOCIAL">
+                <br>
+                
+                <a href="cadastro2.html">
+                    <input type="submit" name="Envia" value="CONFIRMAR" onclick="redirecionar()">
+                </a>
+    
+            </form>
+    
+            <p class="grayText"> Ao cadastrar-se, você concorda <br>com nossos <a class="link" href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Termos e Políticas de Privacidade</a>.</p>
+
+            <hr class="grayLine">
+    
+            <p class="grayText">Já tem uma conta? <a href="login.html" class="link">Conecte-se</a> </p>
+            
+        </section>
+
+    </section>
+
+
+
+    <script>
+
+        let btn = document.querySelector('.eye');
+
+        btn.addEventListener('click', function() {
+
+            let input = document.querySelector('#password');
+
+            if(input.getAttribute('type') == 'password') {
+                input.setAttribute('type', 'text');
+                document. getElementById('olho').src = "../IMAGENS/eye-slash-regular-formated.png";
+
+            } 
+            else {
+                input.setAttribute('type', 'password');
+                document. getElementById('olho').src = "../IMAGENS/eye-regular-formated.png";
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>

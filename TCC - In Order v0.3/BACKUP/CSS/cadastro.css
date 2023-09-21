@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro&display=swap');
+
+*{
+
+    padding: auto 0;
+    margin: auto 0;
+    box-sizing: border-box;
+
+
+}
+
+::-ms-reveal{ /* EVITA APARECIMENTO DE OLHO NA SENHA QUANDO UTILIZANDO O EDGE*/
+    display: none;
+} 
+
+body{
+
+    background-image: linear-gradient(to bottom, #ff5400, #ff8a05);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.outerBox{
+
+    height: 97vh;
+    width: 97vw;
+
+    margin: auto;
+
+    display: flex;  
+
+}
+
+.loginBox{
+
+    margin: auto;
+    text-align: center;
+
+    width: 330px;
+    border-radius: 25px;
+    background-color: white;
+    
+}
+
+.logoLogin{
+    
+    height: 70px;
+    margin-top: 40px;
+
+}
+
+.loginBox h1{
+
+    color: #ff5400;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+.loginBox input{
+
+    width: 250px;
+    margin-top: 10px;
+    border: 2px solid #2b2a2ac0;    
+
+}
+
+.loginBox input[type=text]{
+    
+    height: 40px;
+    border-radius: 15px;
+
+    padding-left: 10px;
+
+}
+
+.loginBox input[type=password]{
+    
+    height: 40px;
+    border-radius: 15px;
+
+    padding-left: 10px;
+
+}
+
+.loginBox input[type=submit]{
+
+    color: white;
+    box-shadow: black 1.5px 2.5px 5px;
+    font-weight:bold;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    height: 45px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: #ff6200;
+    cursor: pointer;
+    
+}
+.loginBox input[type=submit]:hover{ 
+
+    transition: 0.5s all;
+    background-color: white;
+    color: #ff6200;
+    border: 1px solid#2b2a2ac0; 
+
+}
+
+.link{
+
+    font-size: 13px;
+    color: #ff5400;
+    text-decoration: none;
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.link:hover{
+
+    cursor: pointer;
+    border-bottom: 1px solid #ff5400;
+
+}
+
+.grayLine{
+
+    color: #2b2a2ac0; 
+
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+}
+
+.grayText{
+
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2b2a2ac0;
+   
+    margin-bottom: 15px;
+
+}
+
+img.eye {
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    margin-left: 63%;
+    margin-top: -8%;
+    top: -23px;
+    height: 22px;
+}
+
+img.eye2 {
+    z-index: 2;
+    position: relative;
+    cursor: pointer;
+    margin-left: 63%;
+    margin-top: -8%;
+    top: -23px;
+    height: 22px;
+}

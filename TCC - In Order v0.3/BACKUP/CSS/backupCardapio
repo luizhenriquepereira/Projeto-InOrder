@@ -1,0 +1,137 @@
+*{
+    margin: auto 0;
+    padding: auto 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 0, 0.753);
+    font-family: 'Calibri', sans-serif;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 60px;
+    background-image: linear-gradient(to bottom, #ff6200, #ff8a05);
+}
+
+#imagemNotificacao{
+    height: 50px;
+    cursor: pointer;
+}
+
+#imagemPerfil{
+    height: 50px;
+    cursor: pointer;
+}
+
+nav ul{
+    gap: 100px;
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+nav a{
+    text-shadow: 1px 1px 2px #ff62007e;
+    color: white;
+    padding: 15px 25px 35px 25px;
+}
+nav a:hover{
+    border-bottom: 2px solid white;
+}
+
+.menuOp{
+    border-radius: 15px;
+    border: 2px solid transparent;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+
+}
+.menuOp:hover{
+    background-color: #df5500;
+    transition: 0.4s all;
+}
+
+.menuOpt{
+    background-color: white;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+    cursor: pointer;
+}
+
+.menuOpt:hover{
+    background-color: #df5500;
+    transition: 0.4s all;
+}
+
+div.divisaoFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+div.divisaoPagina{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 10px;
+    gap: 20px;  
+}
+
+section.divisaoBotao{
+    height: 100%;
+    width: 100%;
+    border: 1px solid white;
+}
+
+section.divisaoOutra{
+    height: 100%;
+    width: 100%;   
+    border: 1px solid white;
+}
+
+a.marca{
+    padding: 30px;
+    color: #f5782a;
+}
+a.marca:hover{
+    transition: 0.4s all;
+    color: white;
+}
+
+h1{
+
+    color: white;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    text-align: center;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.outsideBox{
+
+    border: white solid 1px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.innerBox{
+
+    gap: 20px;
+
+}
