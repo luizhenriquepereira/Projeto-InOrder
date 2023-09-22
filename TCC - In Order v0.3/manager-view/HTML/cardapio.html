@@ -16,36 +16,49 @@
     
     <header>
     
-        <div class="headerBox">
+        <div class="headerWrapper">
+
+            <div class="headerBox">
             
-            <a href="perfil.html">
-                <span class="material-symbols-outlined" id="perfil">
-                account_circle
-                </span>
-            </a>
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="perfil">
+                    account_circle
+                    </span>
+                </a>
+            </div>
+            <div id="navBox">
+                <nav>
+            
+                        <span><a id="currentPlace" href="#">Cardápio</a></span>
+                        <span><a href="pedidos.html">Pedidos</a></span>
+                        <span><a href="mesas.html">Mesas</a></span>
+                        <span><a href="garcom.html">Garçom</a></span>
+            
+                </nav>
+            </div>
+            <div class="headerBox">
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="config">
+                    settings
+                    </span>
+                </a>
+            </div>
 
         </div>
 
-        <div id="navBox">
+        <div class="optionList" id="opList">
 
-            <nav>
-                
-                    <span><a id="currentPlace" href="#">Cardápio</a></span>
-                    <span><a href="pedidos.html">Pedidos</a></span>
-                    <span><a href="mesas.html">Mesas</a></span>
-                    <span><a href="garcom.html">Garçom</a></span>
-                
-            </nav> 
+            <span><p><a id="currentPlace" href="#">Cardápio</a></p></span>
+            <span><p><a href="pedidos.html">Pedidos</a></p></span>
+            <span><p><a href="mesas.html">Mesas</a></p></span>
+            <span><p><a href="garcom.html">Garçom</a></p></span><br>
 
         </div>
+        <div class="setaDiv">
 
-        <div class="headerBox">
-
-            <a href="perfil.html">
-                <span class="material-symbols-outlined" id="config">
-                settings
-                </span>
-            </a>
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_up
+            </span>
 
         </div>
     
@@ -63,8 +76,6 @@
         <div class="secaoWrapper">
 
             <h1>Pratos Principais: Itens</h1>  
-            <h2>Clique no item para editar</h2>  
-
             <hr> <br>
 
             <!-- ITEM COMEÇA -->
@@ -75,9 +86,19 @@
                         <td rowspan="2"><div class="fotoItem" id="fotoFeijoada"></div></td>
                         <td id="nomeItem"><h1>Feijoada</h1></td>
                         <td id="precoItem" rowspan="2">R$ 29,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                settings
+                            </span>
+                        </td>
                     </tr>
                     <tr>
                         <td id="descricaoItem"><p>Arroz, Feijão, Purê de Batata e Batatas Fritas.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
                     </tr>
                 </table>
             </section>
@@ -123,9 +144,7 @@
 
         <div class="secaoWrapper">
 
-            <h1>Bebidas: Itens</h1>  
-            <h2>Clique no item para editar</h2>  
-
+            <h1>Bebidas: Itens</h1>
             <hr> <br>
 
             <!-- ITEM COMEÇA -->
@@ -187,6 +206,16 @@
        </section>
 
     </main>
+
+    <script>
+
+        function showOptionList(){
+
+            document.getElementById("opList").style.display = "block";
+
+        }
+
+    </script>
 
 </body>
 </html>

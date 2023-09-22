@@ -1,0 +1,378 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+
+    --backgroundcolor: rgba(0, 0, 0, 0.801);
+
+}
+
+body{
+
+    font-family: 'Calibri', sans-serif;
+    background-color: var(--backgroundcolor);
+    color: white;
+
+}
+
+
+/*Estilização header*/
+.headerWrapper{
+
+    background-image: linear-gradient(to top, #ff6200, #ff8a05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+
+    height: 70px;
+
+    display: flex;
+
+}
+
+#perfil{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+
+    line-height: 70px;
+    margin-left: 10px;
+
+}
+
+#config{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+
+    line-height: 70px;
+    margin-right: 10px;
+
+}
+
+#navBox{
+
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+
+}
+
+img{
+
+    margin: 20px;
+
+}
+
+#imagemPerfil{
+
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#imagemNotificacao{
+
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+header a{
+
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;;
+    padding-bottom: 25px;
+
+}
+
+header a:hover{
+
+    font-weight: bold;
+
+}
+
+#navBox > nav > span > #currentPlace{
+
+    border-bottom: solid 2px white;
+
+}
+
+#navBox > nav > span{
+
+    padding: 12px 0px;
+    border-radius: 7px;
+
+}
+
+.optionList{
+
+    width: 100vw;
+    background-color: #ff6200;
+
+    text-align: center;
+    padding-top: 10px;
+
+    display: none;
+
+}
+
+.setaDiv{
+
+    width: 100vw;
+    background-color: #ff6200;
+
+    display: none;
+    text-align: center;
+
+}
+
+#setaCima{
+
+    margin-top: 7px;
+    cursor: pointer;
+
+}
+
+.optionList span a{
+
+    margin-top: 10px;
+    line-height: 30px;
+    padding: 0px 10px;
+
+}
+
+
+/*Estilização main*/
+main{
+
+    max-width: 700px;
+    margin: auto;
+
+    padding: 20px;
+
+}
+
+main > h1{
+
+
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
+main h2{
+
+    margin-bottom: 10px;
+    font-weight: 400;
+
+}
+
+.adition{
+
+    border: solid 4px white;
+    border-radius: 15px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    max-width: 700px;
+    height: 150px;
+
+    box-sizing: border-box;
+
+}
+
+.menuSection{
+
+    /* border: solid 4px white; */
+    border-radius: 15px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    max-width: 700px;
+    height: 150px;
+
+    text-align: center;
+    line-height: 150px;
+    font-size: 1.5em;
+
+    background: gray url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) fixed center center ;
+    background-size: cover;
+
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
+
+    cursor: pointer;
+
+}
+
+.sectionTabelaCardapio h1{
+
+    font-size: 1em;
+
+}
+
+#pratosPrincipais{
+
+    background: gray url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) scroll center center ;
+    background-size: cover;
+
+}
+
+#bebidas{
+
+    background: gray url(../IMAGENS/pexels-chris-f-1283219.jpg) scroll center center ;
+    background-size: cover;
+
+}
+
+.adition > a > img{
+
+    display: block;
+    height: 100px;
+    margin: auto;
+    margin-top: 26px;
+
+}
+
+
+.secaoWrapper{
+
+    margin-top: -15px;
+
+    border: solid white 2px;
+    border-top: hidden; 
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    padding: 10px;
+
+    text-align: center;
+
+}
+
+.sectionTabelaCardapio{
+
+    margin-top: 5px;
+    border: solid #ff8a05 2px;
+    border-radius: 10px;
+
+}
+
+.tabelaCardapio{
+
+    cursor: pointer;
+
+}
+
+/*ESTILIZAÇÃO DE FOTOS*/
+.fotoItem{  
+    
+    border: solid;
+    border-radius: 5px;
+
+    margin: 5px;
+    height: 60px;
+    width: 80px;
+
+}
+
+#fotoFeijoada{
+
+    background: rgba(75, 61, 61, 0.541) url(../IMAGENS/feijoada-full.jpg) center no-repeat scroll;
+    background-size: cover;
+
+}
+
+#fotoStrogonoff{
+
+    background: rgba(75, 61, 61, 0.541) url(../IMAGENS/strogonoff-full.jpg) center no-repeat scroll;
+    background-size: cover;
+
+}
+
+#fotoSalada{
+
+    background: rgba(75, 61, 61, 0.541) url(../IMAGENS/salada-full.jpeg) center no-repeat scroll;
+    background-size: cover;
+
+}
+
+/* FIM - ESTILIZAÇÃO DE FOTOS*/
+
+#precoItem{
+
+    text-align: center;
+    font-size: 1em;
+
+    
+    width: 20%;
+
+}
+
+#nomeItem{
+
+    text-align: center;
+    width: 80%;
+
+}
+
+#descricaoItem{
+    
+    vertical-align: text-top;
+    font-size: 0.8em;
+    text-align: center;
+    
+    width: 40%;
+
+}
+
+#settingsButton{
+
+    padding-right: 5px;
+    padding-top: 5px;
+
+    font-weight: 300;
+
+}
+
+#deleteButton{
+
+    padding-right: 5px;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 620px) {
+    
+    #navBox{
+        
+        visibility: hidden;
+
+    }
+
+}
+
+@media screen and (max-width:620px) {
+    
+    .setaDiv{
+
+        display: block;
+
+    }
+
+}
