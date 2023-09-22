@@ -57,7 +57,7 @@
         <div class="setaDiv">
 
             <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
-                expand_circle_up
+                expand_circle_down
             </span>
 
         </div>
@@ -211,7 +211,19 @@
 
         function showOptionList(){
 
-            document.getElementById("opList").style.display = "block";
+             if(document.getElementById("opList").style.display == "none"){
+
+                 document.getElementById("opList").style.display = "block";
+                 document.getElementById("setaCima").innerHTML = "expand_circle_up";
+
+             }
+             else{
+
+                document.getElementById("opList").style.display = "none";
+                document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+             }
+ 
 
         }
 
