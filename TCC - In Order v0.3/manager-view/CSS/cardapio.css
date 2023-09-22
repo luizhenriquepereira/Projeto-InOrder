@@ -199,9 +199,9 @@ main h2{
 }
 
 .menuSection{
-
-    /* border: solid 4px white; */
-    border-radius: 15px;
+ 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
     margin-top: 15px;
     margin-bottom: 15px;
