@@ -32,6 +32,12 @@ body{
 
 }
 
+.headerBox{
+
+    text-align: left;
+    
+}
+
 #perfil{
 
     text-decoration: none;
@@ -40,7 +46,6 @@ body{
     font-weight: 500;
 
     line-height: 70px;
-    margin-left: 10px;
 
 }
 
@@ -51,7 +56,6 @@ body{
     font-size: 50px;
 
     line-height: 70px;
-    margin-right: 10px;
 
 }
 
@@ -215,6 +219,12 @@ main h2{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
 
     cursor: pointer;
+
+}
+
+.secaoWrapper h1{
+
+    font-size: 1.5em;
 
 }
 
