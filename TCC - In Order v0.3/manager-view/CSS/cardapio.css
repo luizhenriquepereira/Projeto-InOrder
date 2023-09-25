@@ -46,7 +46,11 @@ body{
     font-size: 32px;
     font-weight: 500;
 
+<<<<<<< HEAD
     line-height: 60px;
+=======
+    line-height: 70px;
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
 
 }
 
@@ -56,7 +60,11 @@ body{
     color: white;
     font-size: 32px;
 
+<<<<<<< HEAD
     line-height: 60px;
+=======
+    line-height: 70px;
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
 
 }
 
@@ -120,6 +128,7 @@ header a:hover{
 
 }
 
+<<<<<<< HEAD
 .optionListWrapper{
 
     position: absolute;
@@ -139,6 +148,9 @@ header a:hover{
 }
 
 #optionList{
+=======
+.optionList{
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
 
     width: 100vw;
     background-color: #ff6200;
@@ -146,13 +158,21 @@ header a:hover{
     text-align: center;
     padding-top: 10px;
 
+<<<<<<< HEAD
+=======
+    display: none;
+
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
 }
 
 .setaDiv{
 
     width: 100vw;
     background-color: #ff6200;
+<<<<<<< HEAD
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+=======
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
 
     display: none;
     text-align: center;
@@ -391,7 +411,11 @@ main h2{
 
 /*MEDIA QUERIES*/
 
+<<<<<<< HEAD
 @media screen and (max-width: 700px) {
+=======
+@media screen and (max-width: 620px) {
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
     
     #navBox{
         
@@ -399,10 +423,21 @@ main h2{
 
     }
 
+<<<<<<< HEAD
+=======
+}
+
+@media screen and (max-width:620px) {
+    
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
     .setaDiv{
 
         display: block;
 
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> c41d50815bc1eef0faec6909bd654eeabe9783f4
