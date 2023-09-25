@@ -21,26 +21,32 @@ body{
 
 
 /*Estilização header*/
-header{
+.headerWrapper{
 
     background-image: linear-gradient(to top, #ff6200, #ff8a05);
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
 
-    height: 70px;
+    height: 60px;
 
     display: flex;
+    position: absolute;
+    z-index: 2;
 
+}
+
+.headerBox{
+
+    text-align: left;
+    
 }
 
 #perfil{
 
     text-decoration: none;
     color: white;
-    font-size: 50px;
+    font-size: 32px;
     font-weight: 500;
 
-    line-height: 70px;
-    margin-left: 10px;
+    line-height: 60px;
 
 }
 
@@ -48,16 +54,14 @@ header{
 
     text-decoration: none;
     color: white;
-    font-size: 50px;
+    font-size: 32px;
 
-    line-height: 70px;
-    margin-right: 10px;
+    line-height: 60px;
 
 }
 
 #navBox{
 
-    max-width: 500px;
     margin: auto;
     text-align: center;
     padding: 15px;
@@ -88,16 +92,16 @@ img{
 
 }
 
-#navBox > nav > span > a{
+header a{
 
     text-decoration: none;
     color: white;
     padding: 10px 30px;;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
 
 }
 
-#navBox > nav > span > a:hover{
+header a:hover{
 
     font-weight: bold;
 
@@ -116,6 +120,60 @@ img{
 
 }
 
+.optionListWrapper{
+
+    position: absolute;
+    top: -45px;
+    z-index: 1;
+    transition: all 0.4s;
+
+}
+
+.optionListWrapperActive{
+
+    position: absolute;
+    top: 45px;
+    z-index: 1;
+    transition: all 0.4s;
+
+}
+
+#optionList{
+
+    width: 100vw;
+    background-color: #ff6200;
+
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.setaDiv{
+
+    width: 100vw;
+    background-color: #ff6200;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+
+    display: none;
+    text-align: center;
+
+}
+
+#setaCima{
+
+    margin-top: 7px;
+    cursor: pointer;
+
+}
+
+.optionList span a{
+
+    margin-top: 10px;
+    line-height: 30px;
+    padding: 0px 10px;
+
+}
+
 
 /*Estilização main*/
 main{
@@ -124,6 +182,12 @@ main{
     margin: auto;
 
     padding: 20px;
+
+}
+
+.stupidCss{
+
+    margin-top: 95px;
 
 }
 
@@ -159,9 +223,9 @@ main h2{
 }
 
 .menuSection{
-
-    /* border: solid 4px white; */
-    border-radius: 15px;
+ 
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 
     margin-top: 15px;
     margin-bottom: 15px;
@@ -179,6 +243,18 @@ main h2{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
 
     cursor: pointer;
+
+}
+
+.secaoWrapper h1{
+
+    font-size: 1.5em;
+
+}
+
+.sectionTabelaCardapio h1{
+
+    font-size: 1em;
 
 }
 
@@ -243,8 +319,8 @@ main h2{
     border-radius: 5px;
 
     margin: 5px;
-    height: 80px;
-    width: 100px;
+    height: 60px;
+    width: 80px;
 
 }
 
@@ -274,7 +350,7 @@ main h2{
 #precoItem{
 
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1em;
 
     
     width: 20%;
@@ -291,9 +367,42 @@ main h2{
 #descricaoItem{
     
     vertical-align: text-top;
-    font-size: 1.2em;
+    font-size: 0.8em;
     text-align: center;
     
     width: 40%;
+
+}
+
+#settingsButton{
+
+    padding-right: 5px;
+    padding-top: 5px;
+
+    font-weight: 300;
+
+}
+
+#deleteButton{
+
+    padding-right: 5px;
+
+}
+
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 700px) {
+    
+    #navBox{
+        
+        visibility: hidden;
+
+    }
+
+    .setaDiv{
+
+        display: block;
+
+    }
 
 }
