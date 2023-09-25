@@ -17,8 +17,6 @@ body{
     background-color: var(--backgroundcolor);
     color: white;
 
-    overflow-x: hidden;
-
 }
 
 
@@ -26,13 +24,11 @@ body{
 .headerWrapper{
 
     background-image: linear-gradient(to top, #ff6200, #ff8a05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
 
-    height: 60px;
-    width: 100vw;
+    height: 70px;
 
     display: flex;
-    position: absolute;
-    z-index: 2;
 
 }
 
@@ -46,10 +42,10 @@ body{
 
     text-decoration: none;
     color: white;
-    font-size: 32px;
+    font-size: 50px;
     font-weight: 500;
 
-    line-height: 60px;
+    line-height: 70px;
 
 }
 
@@ -57,9 +53,9 @@ body{
 
     text-decoration: none;
     color: white;
-    font-size: 32px;
+    font-size: 50px;
 
-    line-height: 60px;
+    line-height: 70px;
 
 }
 
@@ -100,7 +96,7 @@ header a{
     text-decoration: none;
     color: white;
     padding: 10px 30px;;
-    padding-bottom: 20px;
+    padding-bottom: 25px;
 
 }
 
@@ -123,25 +119,7 @@ header a:hover{
 
 }
 
-.optionListWrapper{
-
-    position: absolute;
-    top: -45px;
-    z-index: 1;
-    transition: all 0.4s;
-
-}
-
-.optionListWrapperActive{
-
-    position: absolute;
-    top: 45px;
-    z-index: 1;
-    transition: all 0.4s;
-
-}
-
-#optionList{
+.optionList{
 
     width: 100vw;
     background-color: #ff6200;
@@ -149,13 +127,14 @@ header a:hover{
     text-align: center;
     padding-top: 10px;
 
+    display: none;
+
 }
 
 .setaDiv{
 
     width: 100vw;
     background-color: #ff6200;
-    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
 
     display: none;
     text-align: center;
@@ -185,12 +164,6 @@ main{
     margin: auto;
 
     padding: 20px;
-
-}
-
-.stupidCss{
-
-    margin-top: 95px;
 
 }
 
@@ -394,7 +367,7 @@ main h2{
 
 /*MEDIA QUERIES*/
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 620px) {
     
     #navBox{
         
@@ -402,6 +375,10 @@ main h2{
 
     }
 
+}
+
+@media screen and (max-width:620px) {
+    
     .setaDiv{
 
         display: block;

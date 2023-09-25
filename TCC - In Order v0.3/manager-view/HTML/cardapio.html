@@ -46,192 +46,210 @@
 
         </div>
 
-            <section id="identifier" class="optionListWrapper">
+        <div class="optionList" id="opList">
 
-                <div id="optionList">
-                    <span><p><a id="currentPlace" href="#">Cardápio</a></p></span>
-                    <span><p><a href="pedidos.html">Pedidos</a></p></span>
-                    <span><p><a href="mesas.html">Mesas</a></p></span>
-                    <span><p><a href="garcom.html">Garçom</a></p></span><br>
-                </div>
-                <div class="setaDiv">
-                    <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
-                        expand_circle_down
-                    </span>
-                </div>
+            <span><p><a id="currentPlace" href="#">Cardápio</a></p></span>
+            <span><p><a href="pedidos.html">Pedidos</a></p></span>
+            <span><p><a href="mesas.html">Mesas</a></p></span>
+            <span><p><a href="garcom.html">Garçom</a></p></span><br>
 
-            </section>
+        </div>
+        <div class="setaDiv">
+
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_down
+            </span>
+
+        </div>
     
     </header>
     <main>
 
-       <div class="stupidCss">
-           <h1>Customizar Cardápio</h1>
-            <section class="menuSection" id="pratosPrincipais">
-                <h1>Pratos Principais</h1>
+       <h1>Customizar Cardápio</h1>
+
+        <section class="menuSection" id="pratosPrincipais">
+
+            <h1>Pratos Principais</h1>
+
+        </section>
+
+        <div class="secaoWrapper">
+
+            <h1>Pratos Principais: Itens</h1>
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoFeijoada"></div></td>
+                        <td id="nomeItem"><h1>Feijoada</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 29,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Arroz, Feijão, Purê de Batata e Batatas Fritas.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
             </section>
-            <div class="secaoWrapper">
-                <h1>Pratos Principais: Itens</h1>
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-           
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoFeijoada"></div></td>
-                            <td id="nomeItem"><h1>Feijoada</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 29,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Arroz, Feijão, Purê de Batata e Batatas Fritas.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoStrogonoff"></div></td>
-                            <td id="nomeItem"><h1>Strogonoff</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 32,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Arroz, Feijão e Batata Palha.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoSalada"></div></td>
-                            <td id="nomeItem"><h1>Salada</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 7,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Tomate, Alface, Cenoura e Brócolis.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-            </div>
-            <section class="menuSection" id="bebidas">
-                <h1>Bebidas</h1>
+            <!-- ITEM TERMINA -->
+
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoStrogonoff"></div></td>
+                        <td id="nomeItem"><h1>Strogonoff</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 32,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Arroz, Feijão e Batata Palha.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
             </section>
-            <div class="secaoWrapper">
-                <h1>Bebidas: Itens</h1>
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-           
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoFeijoada"></div></td>
-                            <td id="nomeItem"><h1>Feijoada</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 29,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Arroz, Feijão, Purê de Batata e Batatas Fritas.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoStrogonoff"></div></td>
-                            <td id="nomeItem"><h1>Strogonoff</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 32,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Arroz, Feijão e Batata Palha.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-                <!-- ITEM COMEÇA -->
-                <section class="sectionTabelaCardapio">
-                    <table class="tabelaCardapio">
-                        <tr>
-                            <td rowspan="2"><div class="fotoItem" id="fotoSalada"></div></td>
-                            <td id="nomeItem"><h1>Salada</h1></td>
-                            <td id="precoItem" rowspan="2">R$ 7,00</td>
-                            <td>
-                                <span class="material-symbols-outlined" id="settingsButton">
-                                    edit
-                                </span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td id="descricaoItem"><p>Tomate, Alface, Cenoura e Brócolis.</p></td>
-                            <td>
-                                <span class="material-symbols-outlined" id="deleteButton">
-                                    delete
-                                </span>
-                            </td>
-                        </tr>
-                    </table>
-                </section>
-                <!-- ITEM TERMINA -->
-            </div>
-           
-            <br><br><hr>
-            <h1>Criar nova seção</h1>
-           <section class="adition">
-                <a href="#"><img src="../IMAGENS/mais.png" alt=""></a>
-           </section>
-       </div>
+            <!-- ITEM TERMINA -->
+
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoSalada"></div></td>
+                        <td id="nomeItem"><h1>Salada</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 7,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Tomate, Alface, Cenoura e Brócolis.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!-- ITEM TERMINA -->
+
+        </div>
+
+        <section class="menuSection" id="bebidas">
+
+            <h1>Bebidas</h1>
+
+        </section>
+
+        <div class="secaoWrapper">
+
+            <h1>Bebidas: Itens</h1>
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoFeijoada"></div></td>
+                        <td id="nomeItem"><h1>Feijoada</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 29,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Arroz, Feijão, Purê de Batata e Batatas Fritas.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!-- ITEM TERMINA -->
+
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoStrogonoff"></div></td>
+                        <td id="nomeItem"><h1>Strogonoff</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 32,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Arroz, Feijão e Batata Palha.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!-- ITEM TERMINA -->
+
+            <!-- ITEM COMEÇA -->
+            <section class="sectionTabelaCardapio">
+                <table class="tabelaCardapio">
+                    <tr>
+                        <td rowspan="2"><div class="fotoItem" id="fotoSalada"></div></td>
+                        <td id="nomeItem"><h1>Salada</h1></td>
+                        <td id="precoItem" rowspan="2">R$ 7,00</td>
+                        <td>
+                            <span class="material-symbols-outlined" id="settingsButton">
+                                edit
+                            </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="descricaoItem"><p>Tomate, Alface, Cenoura e Brócolis.</p></td>
+                        <td>
+                            <span class="material-symbols-outlined" id="deleteButton">
+                                delete
+                            </span>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+            <!-- ITEM TERMINA -->
+
+        </div>
+        
+        <br><br><hr>
+
+        <h1>Criar nova seção</h1>
+
+       <section class="adition">
+
+            <a href="#"><img src="../IMAGENS/mais.png" alt=""></a>
+
+       </section>
 
     </main>
 
@@ -239,19 +257,18 @@
 
         function showOptionList(){
 
-            if (document.getElementById("identifier").className == "optionListWrapper" ){
+             if(document.getElementById("opList").style.display == "none"){
 
-                document.getElementById("identifier").className = "optionListWrapperActive";
-                document.getElementById("setaCima").innerHTML = " expand_circle_up";
+                 document.getElementById("opList").style.display = "block";
+                 document.getElementById("setaCima").innerHTML = "expand_circle_up";
 
-            }
+             }
+             else{
 
-            else if(document.getElementById("identifier").className == "optionListWrapperActive"){
+                document.getElementById("opList").style.display = "none";
+                document.getElementById("setaCima").innerHTML = "expand_circle_down";
 
-                document.getElementById("identifier").className = "optionListWrapper";
-                document.getElementById("setaCima").innerHTML = " expand_circle_down";
-
-            }
+             }
 
         }
 
