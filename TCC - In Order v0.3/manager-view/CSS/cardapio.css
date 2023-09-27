@@ -200,6 +200,9 @@ main h2{
 
 .menuSection{
  
+    border: solid 3px white;
+    border-bottom: hidden;
+
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
 
@@ -248,6 +251,12 @@ main h2{
 
 }
 
+.adition{
+
+    text-align: center;
+
+}
+
 .adition > a > img{
 
     display: block;
@@ -257,12 +266,20 @@ main h2{
 
 }
 
+.adition span{
+
+    color: white;
+    
+    line-height: 154px;
+    font-size: 7.5em;
+
+}
 
 .secaoWrapper{
 
     margin-top: -15px;
 
-    border: solid white 2px;
+    border: solid white 3px;
     border-top: hidden; 
 
     border-bottom-left-radius: 10px;
@@ -282,9 +299,24 @@ main h2{
 
 }
 
-.tabelaCardapio{
+.sectionTabelaCardapioAdition{
+
+    margin-top: 5px;
+    border: solid rgb(233, 232, 232) 2px;
+    color:rgb(233, 232, 232);
+
+    border-radius: 10px;
+    height: 50px;
+    padding: 15px;
 
     cursor: pointer;
+
+}
+
+#addProduct{
+
+    font-size: 2em;
+    font-weight: 300;
 
 }
 
@@ -356,12 +388,215 @@ main h2{
     padding-top: 5px;
 
     font-weight: 300;
+    cursor: pointer;
 
 }
 
 #deleteButton{
 
     padding-right: 5px;
+    cursor: pointer;
+
+}
+
+.sectionPuller{
+
+    margin-top: 10px;
+    background-color: #ff6200;
+
+    border-bottom-left-radius:  5px;
+    border-bottom-right-radius:  5px;
+
+    padding: 3px;
+
+    cursor: pointer;
+
+}
+
+/*ESTILIZAÇÃO CRIAR SEÇÃO*/
+
+.sectionBox{
+
+    max-width: 700px;
+
+    margin: auto;    
+
+    border-radius: 15px;
+    background-color: white;
+
+    padding: 15px;
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445);
+
+}
+
+.sectionBox a{
+
+    text-decoration: none;
+
+}
+
+.sectionBox p{
+
+    color: #ff6200;
+    font-size: 1.5em;
+
+    margin-bottom: 10px;
+
+    font-weight: 600;
+
+    text-align: center;
+
+}
+
+.sectionBox input[type = 'text']{
+
+    width: 90%;
+    height: 30px;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 10px;
+    border: solid 2px gray;
+
+    font-size: 1.1em;
+    text-align: center;
+
+}
+
+.sectionBox input[type = 'file']{
+
+    display: none;
+
+}
+
+.addSectionBackground{
+
+    height: 150px;
+    width: 90%;
+
+    display: block;
+    margin: auto;
+
+    border: 2px solid gray;
+    border-radius: 10px;
+
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.addSectionBackground span{
+
+    color: gray;
+    
+    line-height: 154px;
+    font-size: 4em;
+
+}
+
+.sectionBox input[type = 'submit']{
+
+    transition: all 0.5s;
+
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+
+    height: 50px;
+    width: 150px;
+
+    cursor: pointer;
+
+    border: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445);
+
+    background-color: #ff6200;
+    color: white;
+
+}
+
+.sectionBox input[type = 'submit']:hover{
+
+    transition: all 0.5s;
+
+    border: solid 3px #ff6200;
+    background-color: white;
+    color: #ff6200;
+
+    font-weight: 600;
+
+}
+
+/*ESTILIZAÇÃO CRIAR PRODUTO*/
+
+.addProductBackground{
+
+    height: 150px;
+    width: 90%;
+
+    margin: auto;
+
+    border: 2px solid gray;
+    border-radius: 10px;
+
+    cursor: pointer;
+    text-align: center;
+
+}
+
+.addProductBackground span{
+
+    color: gray;
+    
+    line-height: 154px;
+    font-size: 4em;
+
+}
+
+#iproductName{
+
+    width: 90%;
+
+    display: block;
+    margin: auto;
+
+}
+
+textarea{
+
+    display: block;
+    margin: auto;
+
+    width: 87%;
+
+    border: 2px solid gray;
+    border-radius: 10px;
+
+    resize: none;
+
+    padding: 10px;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+
+}
+
+.sectionBox input[type = 'number']{
+
+    width: 70%;
+    height: 30px;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 10px;
+    border: solid 2px gray;
+
+    font-size: 1.1em;
+    text-align: center;
 
 }
 

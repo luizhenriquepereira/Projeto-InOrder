@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../CSS/cardapio.css">
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">   
+
+    <title>InOrder - Criar Seção</title>
+</head>
+<body>
+
+    <header>
+    
+        <div class="headerWrapper">
+
+            <div class="headerBox">
+            
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="perfil">
+                    account_circle
+                    </span>
+                </a>
+            </div>
+            <div id="navBox">
+                <nav>
+            
+                        <span><a id="currentPlace" href="cardapio.html">Cardápio</a></span>
+                        <span><a href="pedidos.html">Pedidos</a></span>
+                        <span><a href="mesas.html">Mesas</a></span>
+                        <span><a href="garcom.html">Garçom</a></span>
+            
+                </nav>
+            </div>
+            <div class="headerBox">
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="config">
+                    settings
+                    </span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="optionList" id="opList">
+
+            <span><p><a id="currentPlace" href="cardapio.html">Cardápio</a></p></span>
+            <span><p><a href="pedidos.html">Pedidos</a></p></span>
+            <span><p><a href="mesas.html">Mesas</a></p></span>
+            <span><p><a href="garcom.html">Garçom</a></p></span><br>
+
+        </div>
+        <div class="setaDiv">
+
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_down
+            </span>
+
+        </div>
+    
+    </header>
+    <main>
+
+        <h1>Criando seção</h1>
+
+        <section class="sectionBox">
+
+            <form action="#" method="post">
+
+                <label for="isectionName">
+
+                    <p>Nome</p>
+                    <input type="text" name="sectionName" id="isectionName" placeholder="Ex: Pratos Quentes, Sobremesas, Bebidas, etc." required>
+
+                </label>
+                <br><br>
+
+                <p>Plano de Fundo</p>
+                <label for="isectionBackground">
+
+                    <div class="addSectionBackground">
+
+                        <input type="file" name="sectionBackground" id="isectionBackground">
+                        
+                        <span class="material-symbols-outlined">
+                            add_a_photo
+                        </span>
+                    
+                    </div>
+
+                </label>
+
+                <a href="cardapio.html"><input type="submit" value="ENVIAR"></a>
+
+            </form>
+
+        </section>
+
+    </main>
+    <script>
+
+        function showOptionList(){
+
+        if(document.getElementById("opList").style.display == "none"){
+
+            document.getElementById("opList").style.display = "block";
+            document.getElementById("setaCima").innerHTML = "expand_circle_up";
+
+        }
+        else{
+
+        document.getElementById("opList").style.display = "none";
+        document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+        }
+
+        }
+
+    </script>
+
+</body>
+</html>
