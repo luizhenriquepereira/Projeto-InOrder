@@ -88,7 +88,7 @@
 
         </section>
 
-        <div class="secaoWrapper">
+        <div class="secWrapper" id="sectionWrapper">
 
             <h1>Pratos Principais: Itens</h1>
 
@@ -179,9 +179,9 @@
             </section>  
             <!-- ITEM TERMINA -->  
             
-            <section class="sectionPuller">
+            <section class="sectionPuller" onclick="showSection()">
 
-                <span class="material-symbols-rounded">
+                <span class="material-symbols-rounded" id="expandIcon">
                     expand_circle_up
                 </span>
 
@@ -209,6 +209,27 @@
              }
 
         }
+
+        // function showSection(){
+
+        //     var element = document.getElementById("sectionWrapper");
+        //     var span = document.getElementById("expandIcon");
+
+        //     if(element.classList == "secWrapperClosed"){
+
+        //         element.classList = "secWrapper";
+        //         span.innerHTML = "expand_circle_up";
+                
+        //     }
+
+        //     if(element.classList == "secWrapper"){
+
+        //         element.classList = "secWrapperClosed";
+        //         span.innerHTML = "expand_circle_down";
+
+        //     }
+
+        // }
 
     </script>
 
