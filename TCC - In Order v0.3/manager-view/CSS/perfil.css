@@ -1,1 +1,226 @@
- 
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+
+    --backgroundcolor: rgba(0, 0, 0, 0.801);
+
+}
+
+body{
+
+    font-family: 'Calibri', sans-serif;
+    background-color: var(--backgroundcolor);
+    color: white;
+
+}
+
+
+/*Estilização header*/
+.headerWrapper{
+
+    background-image: linear-gradient(to top, #ff6200, #ff8a05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.432) ;
+
+    height: 70px;
+
+    display: flex;
+
+}
+
+.headerBox{
+
+    text-align: left;
+    
+}
+
+#perfil{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-weight: 500;
+
+    line-height: 70px;
+
+}
+
+#config{
+
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+
+    line-height: 70px;
+
+}
+
+#navBox{
+
+    margin: auto;
+    text-align: center;
+    padding: 15px;
+
+}
+
+img{
+
+    margin: 20px;
+
+}
+
+#imagemPerfil{
+
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+}
+
+#imagemNotificacao{
+
+    margin-top: 20px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+}
+
+header a{
+
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;;
+    padding-bottom: 25px;
+
+}
+
+header a:hover{
+
+    font-weight: bold;
+
+}
+
+#navBox > nav > span{
+
+    padding: 12px 0px;
+    border-radius: 7px;
+
+}
+
+.optionList{
+
+    width: 100vw;
+    background-color: #ff6200;
+
+    text-align: center;
+    padding-top: 10px;
+
+    display: none;
+
+}
+
+.setaDiv{
+
+    width: 100vw;
+    background-color: #ff6200;
+
+    display: none;
+    text-align: center;
+
+}
+
+#setaCima{
+
+    margin-top: 7px;
+    cursor: pointer;
+
+}
+
+.optionList span a{
+
+    margin-top: 10px;
+    line-height: 30px;
+    padding: 0px 10px;
+
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+main{
+
+    max-width: 800px;
+    width: 90vw;
+
+    margin: auto;
+
+}
+
+main h1{
+
+    text-align: center;
+    margin: 15px;
+
+}
+
+main p{
+
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.3em;
+
+}
+
+main input[type = "text"]{
+
+    width: 95%;
+    height: 40px;
+
+    padding: 3px 10px;
+
+    display: block;
+    margin: auto;
+
+    border-radius: 5px;
+    border: solid 2px #ff6200;
+
+    font-size: 1.1em;
+
+    background-color: rgba(0, 0, 0, 0.171);
+    color: white;
+
+    transition: all 0.2s;
+
+}
+
+main input[type = "text"]:focus{
+    
+    border: solid 2px white; 
+    outline: none;
+
+    transition: all 0.2s;
+
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 720px) {
+    
+    #navBox{
+        
+        visibility: hidden;
+
+    }
+    
+    .setaDiv{
+
+        display: block;
+
+    }
+
+}

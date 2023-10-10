@@ -1,44 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../CSS/perfil.css">
+    
     <title>Perfil</title>
+
 </head>
 <body>
     
+    <header>
+    
+        <div class="headerWrapper">
 
-    <div class="centraliza">
-
-        <div class="grade">
-
-        <section class="faixa1">
-
-            <h1>PERFIL</h1>
-
-            <a href="cardapio.html"><img class="fechar" src="../IMAGENS/x.png"></a>
-
-            <nav>   
-                
-                <ul>
-                <li class="menu">DADOS PESSOAIS</li>
-                </ul>
-
-            </nav>
-
-        </section>
-
-        <section class="faixa 2">
+            <div class="headerBox">
             
-        </section>
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="perfil">
+                    account_circle
+                    </span>
+                </a>
+            </div>
+            <div id="navBox">
+                <nav>
+            
+                        <span><a href="cardapio.html">Cardápio</a></span>
+                        <span><a href="pedidos.html">Pedidos</a></span>
+                        <span><a href="mesas.html">Mesas</a></span>
+                        <span><a href="garcom.html">Garçom</a></span>
+            
+                </nav>
+            </div>
+            <div class="headerBox">
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="config">
+                    settings
+                    </span>
+                </a>
+            </div>
 
         </div>
 
-    </div>
+        <div class="optionList" id="opList">
 
+            <span><p><a href="cardapio.html">Cardápio</a></p></span>
+            <span><p><a href="pedidos.html">Pedidos</a></p></span>
+            <span><p><a href="mesas.html">Mesas</a></p></span>
+            <span><p><a href="garcom.html">Garçom</a></p></span><br>
+
+        </div>
+        <div class="setaDiv">
+
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_down
+            </span>
+
+        </div>
+    
+    </header>
+    <main>
+
+        <h1>Configurações da conta</h1>
+        <hr>
+
+        <form action="#" method="post">
+
+            <label for="inome">
+
+                <p>Nome de usuário:</p>
+                <input type="text" name="nome" id="inome" value="Luiz Henrique">
+
+            </label>
+            <label for="iemail">
+
+                <p>Endereço de email:</p>
+                <input type="text" name="email" id="iemail" value="luizhenrique@gmail.com">
+
+            </label>
+            <label for="inomeEmpresa">
+
+                <p>Nome da empresa:</p>
+                <input type="text" name="nomeEmpresa" id="inomeEmpresa" value="Estrela Bar">
+
+            </label>
+            <label for="icpf">
+
+                <p>CPF:</p>
+                <input type="text" name="cpf" id="icpf" value="XXX-XXX">
+
+            </label>
+            <label for="itel">
+
+                <p>Número de Telefone:</p>
+                <input type="text" name="tel" id="itel" value="123123123">
+
+            </label>
+            <label for="icnpj">
+
+                <p>CNPJ:</p>
+                <input type="text" name="cnpj" id="icnpj" value="XXX-XXX">
+
+            </label>
+
+            <h1>Configurações de Plano</h1>
+            <hr>
+
+            
+
+        </form>
+
+    </main>
+    <footer>
+
+
+
+    </footer>
+    <script>
+
+        function showOptionList(){
+
+             if(document.getElementById("opList").style.display === "none"){
+
+                 document.getElementById("opList").style.display = "block";
+                 document.getElementById("setaCima").innerHTML = "expand_circle_up";
+
+             }
+             else{
+
+                document.getElementById("opList").style.display = "none";
+                document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+             }
+
+        }
+
+    </script>
 
 </body>
 </html>
