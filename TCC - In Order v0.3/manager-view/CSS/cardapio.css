@@ -156,6 +156,28 @@ header a:hover{
 
 }
 
+/*MEDIA QUERIES*/
+
+@media screen and (max-width: 620px) {
+    
+    #navBox{
+        
+        visibility: hidden;
+
+    }
+
+}
+
+@media screen and (max-width:620px) {
+    
+    .setaDiv{
+
+        display: block;
+
+    }
+
+}
+
 
 /*Estilização main*/
 main{
@@ -245,15 +267,9 @@ main h2{
 
 #pratosPrincipais{
 
-    background: gray url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) scroll center center ;
+    background: rgb(85, 85, 85) url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) scroll center center ;
     background-size: cover;
-
-}
-
-#bebidas{
-
-    background: gray url(../IMAGENS/pexels-chris-f-1283219.jpg) scroll center center ;
-    background-size: cover;
+    background-blend-mode: soft-light;
 
 }
 
@@ -632,24 +648,3 @@ textarea{
 
 }
 
-/*MEDIA QUERIES*/
-
-@media screen and (max-width: 620px) {
-    
-    #navBox{
-        
-        visibility: hidden;
-
-    }
-
-}
-
-@media screen and (max-width:620px) {
-    
-    .setaDiv{
-
-        display: block;
-
-    }
-
-}

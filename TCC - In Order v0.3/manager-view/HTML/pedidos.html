@@ -15,36 +15,49 @@
     
     <header>
     
-        <div class="headerBox">
+        <div class="headerWrapper">
+
+            <div class="headerBox">
             
-            <a href="perfil.html">
-                <span class="material-symbols-outlined" id="perfil">
-                account_circle
-                </span>
-            </a>
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="perfil">
+                    account_circle
+                    </span>
+                </a>
+            </div>
+            <div id="navBox">
+                <nav>
+            
+                        <span><a href="cardapio.html">Cardápio</a></span>
+                        <span><a id="currentPlace" href="pedidos.html">Pedidos</a></span>
+                        <span><a href="mesas.html">Mesas</a></span>
+                        <span><a href="garcom.html">Garçom</a></span>
+            
+                </nav>
+            </div>
+            <div class="headerBox">
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="config">
+                    settings
+                    </span>
+                </a>
+            </div>
 
         </div>
 
-        <div id="navBox">
+        <div class="optionList" id="opList">
 
-            <nav>
-                
-                    <span><a href="cardapio.html">Cardápio</a></span>
-                    <span><a id="currentPlace" href="pedidos.html">Pedidos</a></span>
-                    <span><a href="mesas.html">Mesas</a></span>
-                    <span><a href="garcom.html">Garçom</a></span>
-                
-            </nav> 
+            <span><p><a href="cardapio.html">Cardápio</a></p></span>
+            <span><p><a href="pedidos.html">Pedidos</a></p></span>
+            <span><p><a href="mesas.html">Mesas</a></p></span>
+            <span><p><a href="garcom.html">Garçom</a></p></span><br>
 
         </div>
+        <div class="setaDiv">
 
-        <div class="headerBox">
-
-            <a href="perfil.html">
-                <span class="material-symbols-outlined" id="config">
-                settings
-                </span>
-            </a>
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_down
+            </span>
 
         </div>
     
@@ -54,6 +67,48 @@
         <h1>Aqui o gerente poderá ter uma visão geral dos pedidos em andamento no estabelecimento.</h1>
 
     </main>
+
+    <script>
+
+        function showOptionList(){
+
+             if(document.getElementById("opList").style.display == "none"){
+
+                 document.getElementById("opList").style.display = "block";
+                 document.getElementById("setaCima").innerHTML = "expand_circle_up";
+
+             }
+             else{
+
+                document.getElementById("opList").style.display = "none";
+                document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+             }
+
+        }
+
+        // function showSection(){
+
+        //     var element = document.getElementById("sectionWrapper");
+        //     var span = document.getElementById("expandIcon");
+
+        //     if(element.classList == "secWrapperClosed"){
+
+        //         element.classList = "secWrapper";
+        //         span.innerHTML = "expand_circle_up";
+                
+        //     }
+
+        //     if(element.classList == "secWrapper"){
+
+        //         element.classList = "secWrapperClosed";
+        //         span.innerHTML = "expand_circle_down";
+
+        //     }
+
+        // }
+
+    </script>
 
 </body>
 </html>
