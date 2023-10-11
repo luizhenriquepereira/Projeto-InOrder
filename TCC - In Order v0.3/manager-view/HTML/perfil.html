@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
     <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../CSS/perfil.css">
@@ -66,7 +67,7 @@
     </header>
     <main>
 
-        <h1>Configurações da conta</h1>
+        <h1>Informações da conta</h1>
         <hr>
 
         <form action="#" method="post">
@@ -80,13 +81,19 @@
             <label for="iemail">
 
                 <p>Endereço de email:</p>
-                <input type="text" name="email" id="iemail" value="luizhenrique@gmail.com">
+                <input type="text" name="email" id="iemail" value="inorder@gmail.com">
 
             </label>
             <label for="inomeEmpresa">
 
                 <p>Nome da empresa:</p>
-                <input type="text" name="nomeEmpresa" id="inomeEmpresa" value="Estrela Bar">
+                <input type="text" name="nomeEmpresa" id="inomeEmpresa" value="InOrder">
+
+            </label>
+            <label for="itel">
+
+                <p>Número de Telefone:</p>
+                <input type="text" name="tel" id="itel" value="(XX)XXX-XXX">
 
             </label>
             <label for="icpf">
@@ -94,13 +101,7 @@
                 <p>CPF:</p>
                 <input type="text" name="cpf" id="icpf" value="XXX-XXX">
 
-            </label>
-            <label for="itel">
-
-                <p>Número de Telefone:</p>
-                <input type="text" name="tel" id="itel" value="123123123">
-
-            </label>
+            </label>            
             <label for="icnpj">
 
                 <p>CNPJ:</p>
@@ -108,17 +109,79 @@
 
             </label>
 
-            <h1>Configurações de Plano</h1>
+        </form>
+
+        <h1>Configurações de Plano</h1>
             <hr>
 
-            
+            <div class="planoNome"><h1>Maitre</h1></div>
 
-        </form>
+            <div class="planoFlexParent">
+
+                <div class="planoDescription">
+
+                    <ul>
+
+                        <li>Customize um cardápio funcional para clientes</li>
+                        <li>Acesso ao cardápio para até 10 garçons</li>
+                        <li>Sistema de  gerenciamento de pedidos</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="planoPayment">
+
+                    <h1>Pagamento</h1>
+                    <p>Seu próximo pagamento será no dia <strong>XX/XX/XXXX</strong> no valor de <strong>R$ XX,XX</strong>.</p>
+
+                </div>
+
+            </div>
+
+            <div class="mudarPlano">
+
+                <p><a href="">Mudar meu plano</a></p>
+
+            </div>
 
     </main>
     <footer>
 
+        <div class="flexChild" id="sobre">
 
+            <img src="../IMAGENS/logobranca.png" alt="Logo InOrder">
+            <p>O InOrder é um site criado para o gerenciamento de pedidos de estabelecimentos alimentícios, viabilizando a aceleração e diminuição de atrasos e problemas na entrega dos mesmos.</p>
+
+
+        </div>
+        <div class="flexChild" id="blog">
+
+            <h1>Outros</h1>
+
+            <ul>
+
+                <li><a href=""><p>Entre em contato</p></a></li>
+                <li><a href=""><p>Central de Ajuda</p></a></li>
+                <li><a href=""><p>Sobre nós</p></a></li>
+                
+
+            </ul>
+
+        </div>
+        <div class="flexChild" id="acompanhe">
+
+            <h1 id="cssEstupido">Nos acompanhe</h1>
+            
+            <ul>
+
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a>
+
+            </ul>
+
+        </div>
 
     </footer>
     <script>
