@@ -361,6 +361,113 @@ main input[type = "text"]:focus{
     }
 
 }
+/*Fim estilização plano*/
+
+/*Estilização garçom*/
+
+h2{
+
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+
+.addGarcomParent{
+
+    border: solid 2px white;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 110px;
+    
+    max-width: 600px;
+    margin: auto;   
+    margin-top: 10px;
+
+    cursor: pointer;
+
+}
+
+.addGarcomParent span{
+
+    font-size: 3em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.garcomParent{
+
+    border: solid 2px #ff6200;
+    border-bottom: hidden;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    
+    max-width: 600px;
+    margin: auto;   
+    margin-top: 10px;
+
+}
+
+.garcomParent h1 {
+
+    margin: 0;
+
+}
+
+.garcomParent span{
+
+    font-size: 3em;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.garcomParent p{
+
+    font-size: 1.4em;
+
+}
+
+.garcomOptions{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: solid 2px #ff6200;
+    border-top: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    max-width: 600px;
+    margin: auto;
+
+}
+
+.garcomOptions a{
+
+    color: white;
+
+}
+
+.garcomOptions a:hover{
+
+    font-weight: 600;
+
+}
+
+/*Fim estilização garçom*/
 
 /*Estilização footer*/
 footer{
