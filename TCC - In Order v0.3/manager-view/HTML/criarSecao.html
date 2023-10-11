@@ -68,7 +68,7 @@
 
         <section class="sectionBox">
 
-            <form action="#" method="post">
+            <form action="../PHP/recebeSecao.php" method="post" autocomplete="off">
 
                 <label for="isectionName">
 
@@ -76,24 +76,14 @@
                     <input type="text" name="sectionName" id="isectionName" placeholder="Ex: Pratos Quentes, Sobremesas, Bebidas, etc." required>
 
                 </label>
-                <br><br>
+                <br>
 
-                <p>Plano de Fundo</p>
-                <label for="isectionBackground">
+                <div class="submitFlexParent">
 
-                    <div class="addSectionBackground">
+                    <input type="submit" value="ENVIAR" id="enviar">
+                    <input type="submit" value="CRIAR PRODUTOS" id="criar">
 
-                        <input type="file" name="sectionBackground" id="isectionBackground">
-                        
-                        <span class="material-symbols-outlined">
-                            add_a_photo
-                        </span>
-                    
-                    </div>
-
-                </label>
-
-                <a href="cardapio.html"><input type="submit" value="ENVIAR"></a>
+                </div>
 
             </form>
 

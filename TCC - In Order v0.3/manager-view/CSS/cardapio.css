@@ -244,16 +244,15 @@ main h2{
     margin-bottom: 15px;
 
     max-width: 700px;
-    height: 150px;
+    height: 80px;
 
     text-align: center;
-    line-height: 150px;
+    line-height: 80px;
     font-size: 1.5em;
 
-    background: gray url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) fixed center center ;
-    background-size: cover;
+    background-color: #ff6200;
 
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.418);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.329);
 
     cursor: pointer;
 
@@ -274,14 +273,6 @@ main h2{
 .sectionTabelaCardapio h1{
 
     font-size: 1em;
-
-}
-
-#pratosPrincipais{
-
-    background: rgb(85, 85, 85) url(../IMAGENS/pexels-quang-nguyen-vinh-2175211.jpg) scroll center center ;
-    background-size: cover;
-    background-blend-mode: soft-light;
 
 }
 
@@ -556,6 +547,25 @@ main h2{
 
 }
 
+.submitFlexParent{
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+#enviar{
+
+    margin-right: 10px;
+
+}
+
+#criar{
+
+    margin-left: 10px;
+
+}
+
 .sectionBox input[type = 'submit']{
 
     transition: all 0.5s;
@@ -576,17 +586,17 @@ main h2{
     background-color: #ff6200;
     color: white;
 
+    font-weight: 600;
+
 }
 
 .sectionBox input[type = 'submit']:hover{
 
-    transition: all 0.5s;
+    transition: all 0.3s;
 
     border: solid 3px #ff6200;
     background-color: white;
     color: #ff6200;
-
-    font-weight: 600;
 
 }
 
@@ -668,7 +678,7 @@ footer{
     background-color: #242222;
     color: white;
 
-    margin-top: 20px;
+    margin-top: 100px;
 
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
 
