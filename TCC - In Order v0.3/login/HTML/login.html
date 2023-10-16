@@ -18,18 +18,24 @@
     
             <h1>FAZER LOGIN</h1>
     
-            <form action="#" method="post">
+            <form action="../PHP/login.php" method="post">
     
-                <input type="text" name="user" placeholder="E-MAIL,CPF OU USUÁRIO" required> <br>
-                <input type="password" name="password" id="password" placeholder="SENHA" required> <br>
+                <input type="text" name="txtuser" placeholder="CPF" required> <br>
+                <input type="password" name="txtpassword" id="isenha" placeholder="SENHA" required> <br>
+
+                <label for="imudarSenha" class="grayText" onclick="mostrarSenha()">
+                    <input type="checkbox" name="mudarSenha" id="imudarSenha" class="mudarSenha" onclick="mostrarSenha()">
+                    Mostrar senha
+                </label>
+                <br><br>
                 
-                <a href="cardapio.html"><input type="button" name="Envia" value="ENTRAR"></a>
-    
-                <img id="olho" src="../IMAGENS/eye-regular.svg" class="eye"></img>
+                <input type="submit" name="envia" value="ENTRAR" class="enviaBotao">    
+
+                
                 
             </form>
     
-            <a class="link" href="forgot.html">Esqueceu a senha?</a>
+            <a class="link" href="#">Esqueceu a senha?</a>
     
             <hr class="grayLine">
     
@@ -43,24 +49,22 @@
 
     <script>
 
-        let btn = document.querySelector('.eye');
+        function mostrarSenha(){
 
-        btn.addEventListener('click', function() {
+            if(document.getElementById("imudarSenha").checked){
 
-            let input = document.querySelector('#password');
+                document.getElementById("isenha").type =  "text";
+                document.getElementById("iConfirmarSenha").type =  "text";
 
-            if(input.getAttribute('type') == 'password') {
-                input.setAttribute('type', 'text');
-                document. getElementById('olho').src = "../IMAGENS/eye-slash-regular-formated.png";
+            }
+            else{
 
-            } 
-            else {
-                input.setAttribute('type', 'password');
-                document. getElementById('olho').src = "../IMAGENS/eye-regular-formated.png";
+                document.getElementById("isenha").type =  "password";
+                document.getElementById("iConfirmarSenha").type =  "password";
 
             }
 
-        });
+        }
 
     </script>
 

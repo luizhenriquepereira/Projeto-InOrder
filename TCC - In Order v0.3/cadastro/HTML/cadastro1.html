@@ -21,32 +21,41 @@
     
             <h1>CADASTRE-SE</h1>
     
-            <form action="../PHP/recebe.php" method="post">
+            <form action="../PHP/recebeCadastro.php" method="post">
     
                 <label for="iemail">
                     <input type="text" name="txtemail" placeholder="E-MAIL" id="iemail" required>
                 </label> <br>
 
-                <label for="iuser"><input type="text" name="txtuser" placeholder="NOME DE USUÁRIO" id="iuser" required></label> <br>
+                <label for="iuser">
+                    <input type="text" name="txtuser" placeholder="NOME DE USUÁRIO" id="iuser" required>
+                </label> <br>
 
                 <label for="isenha">
-                    <input type="password" name="password" id="password" placeholder="SENHA"
+                    <input type="password" name="txtpassword" id="isenha" placeholder="SENHA"
                     required>
-                </label> 
-                <img id="olho" src="../IMAGENS/eye-regular.svg" class="eye"></img>
+                </label>
+                
+                <label for="ipasswordConfirm">
+                    <input type="password" name="passwordConfirm" id="iConfirmarSenha" placeholder="CONFIRMAR SENHA" required>
+                </label>
+                <br>
 
-                <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="CONFIRMAR SENHA" required>
-                <img id="olho2" src="../IMAGENS/eye-regular.svg" class="eye2"></img><br>
+                <label for="imudarSenha" class="grayText" onclick="mostrarSenha()">
+                    <input type="checkbox" name="mudarSenha" id="imudarSenha" class="mudarSenha" onclick="mostrarSenha()">
+                    Mostrar senha
+                </label>
+                <br><br>
                 
                 <input type="button" name="Envia" value="CONTINUAR" onclick="mudarBox()">
                    
-            </form>
+            
     
             <p class="grayText"> Ao cadastrar-se, você concorda <br>com nossos <a class="link" href="https://www.youtube.com/watch?v=xvFZjo5PgG0&pp=ygUJcmljayByb2xs">Termos e Políticas de Privacidade</a>.</p>
 
             <hr class="grayLine">
     
-            <p class="grayText">Já tem uma conta? <a href="login.html" class="link">Conecte-se</a> </p>
+            <p class="grayText">Já tem uma conta? <a href="../../login/HTML/login.html" class="link">Conecte-se</a> </p>
             
         </section>
 
@@ -56,15 +65,26 @@
     
             <h1>CADASTRE-SE</h1>
     
-            <form action="../PHP/recebe.php" method="post">
 
-                <label for="iempresa"><input type="text" name="txtempresa" placeholder="NOME DA EMPRESA" id="iempresa" required></label> <br>
+                <label for="iempresa">
+                    <input type="text" name="txtempresa" placeholder="NOME DA EMPRESA" id="iempresa" required>
+                </label> 
+                <br>
 
-                <label for="icpf"><input type="text" name="txtcpf" placeholder="CPF" id="icpf" required></label> <br>
+                <label for="icpf">
+                    <input type="text" name="txtcpf" placeholder="CPF" id="icpf" required>
+                </label> 
+                <br>
 
-                <label for="itel"><input type="tel" name="tel" placeholder="NÚMERO DE TELEFONE" id="itel" required></label> <br>
+                <label for="itel">
+                    <input type="tel" name="tel" placeholder="NÚMERO DE TELEFONE" id="itel" required>
+                </label>
+                <br>
 
-                <label for="icnpj"><input type="text" name="txtcnpj" placeholder="CNPJ" id="icnpj" required></label> <br>
+                <label for="icnpj">
+                    <input type="text" name="txtcnpj" placeholder="CNPJ" id="icnpj" required>
+                </label> 
+                <br>
                 
                 <input type="submit" name="Envia" value="CONFIRMAR" id="bot2">
                    
@@ -74,13 +94,13 @@
 
             <hr class="grayLine">
     
-            <p class="grayText">Já tem uma conta? <a href="login.html" class="link">Conecte-se</a> </p>
+            <p class="grayText">Já tem uma conta? <a href="../../login/HTML/login.html" class="link">Conecte-se</a> </p>
             
         </section>
 
     </section>
 
-    <script>
+    <script> 
 
         function mudarBox(){
 
@@ -89,44 +109,22 @@
 
         }
 
-        let btn = document.querySelector('.eye');
+        function mostrarSenha(){
 
-        btn.addEventListener('click', function() {
+            if(document.getElementById("imudarSenha").checked){
 
-            let input = document.querySelector('#password');
+                document.getElementById("isenha").type =  "text";
+                document.getElementById("iConfirmarSenha").type =  "text";
 
-            if(input.getAttribute('type') == 'password') {
-                input.setAttribute('type', 'text');
-                document. getElementById('olho').src = "../IMAGENS/eye-slash-regular-formated.png";
+            }
+            else{
 
-            } 
-            else {
-                input.setAttribute('type', 'password');
-                document. getElementById('olho').src = "../IMAGENS/eye-regular-formated.png";
+                document.getElementById("isenha").type =  "password";
+                document.getElementById("iConfirmarSenha").type =  "password";
 
             }
 
-        });
-
-
-        let btn2 = document.querySelector('.eye2');
-
-            btn2.addEventListener('click', function() {
-
-            let input2 = document.querySelector('#passwordConfirm');
-
-            if(input2.getAttribute('type') == 'password') {
-                input2.setAttribute('type', 'text');
-                document. getElementById('olho2').src = "../IMAGENS/eye-slash-regular-formated.png";
-
-            } 
-            else {
-                input2.setAttribute('type', 'password');
-                document. getElementById('olho2').src = "../IMAGENS/eye-regular-formated.png";
-
-            }
-
-    });
+        }
 
     </script>
 
