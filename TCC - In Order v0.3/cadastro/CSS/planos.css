@@ -147,7 +147,8 @@ input[type = "submit"]{
     margin: auto;
     
     padding: 15px;
-    width: 200px;
+    width: 90%;
+    max-width: 500px;
 
     border: solid white 3px;
     border-radius: 10px;
