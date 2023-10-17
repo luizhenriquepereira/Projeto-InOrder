@@ -17,7 +17,7 @@
 
 <main>
 
-    <section class="plano">
+    <section class="plano" onclick="activeSelfService()" id="iself">
 
         <div class="image">
 
@@ -41,7 +41,7 @@
         </div>
 
     </section>
-    <section class="plano">
+    <section class="plano" onclick="activeLaCarte()" id="ilacarte">
 
         <div class="image">
 
@@ -51,7 +51,7 @@
 
         <div class="description">
 
-            <h1>La carta</h1>
+            <h1>La carte</h1>
 
             <ul>
 
@@ -66,7 +66,7 @@
         </div>
 
     </section>
-    <section class="plano">
+    <section class="plano" onclick="activeMaitre()" id="imaitre">
 
         <div class="image">
 
@@ -76,7 +76,7 @@
 
         <div class="description">
 
-            <h1>Maitre</h1>
+            <h1>Maître</h1>
 
             <ul>
 
@@ -91,7 +91,7 @@
         </div>
 
     </section>
-    <section class="plano">
+    <section class="plano" onclick="activeMichellin()"id="imichellin">
 
         <div class="image">
 
@@ -117,8 +117,84 @@
 
     </section>
     
+    <form action="#" method="post">
+
+        <fieldset id="field">
+            <input type="radio" name="planOption" id="selfService">
+            <input type="radio" name="planOption" id="laCarte">
+            <input type="radio" name="planOption" id="maitre">
+            <input type="radio" name="planOption" id="michellin">
+        </fieldset>
+
+        <input type="submit" value="CONFIRMAR">
+
+    </form>
 
 </main>
 
+
+<script>
+
+    var selfService = document.getElementById("selfService");
+    var laCarte = document.getElementById("laCarte");
+    var maitre = document.getElementById("maitre");
+    var michellin = document.getElementById("michellin");
+
+    var planSelfService = document.getElementById("iself");
+    var planLaCarte = document.getElementById("ilacarte");
+    var planMaitre = document.getElementById("imaitre");
+    var planMichellin = document.getElementById("imichellin");
+
+    var planos = document.getElementsByClassName("plano");
+
+    function activeSelfService(){
+
+        selfService.checked = true;
+
+        planSelfService.style.opacity = 1;
+
+        planLaCarte.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeLaCarte(){
+
+        laCarte.checked = true;
+
+        planLaCarte.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeMaitre(){
+
+        maitre.checked = true;
+
+        planMaitre.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planLaCarte.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeMichellin(){
+
+        michellin.checked = true;
+
+        planMichellin.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planLaCarte.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+
+    }
+
+</script>
 </body>
 </html>

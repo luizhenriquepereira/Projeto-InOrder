@@ -37,6 +37,13 @@ main{
 
     margin-bottom: 15px;
 
+
+}
+
+#currentItem{
+
+    opacity: 1;
+
 }
 
 .plano:hover .image, .plano:hover .description{
@@ -126,6 +133,50 @@ main{
 
 }
 
+#field{
+
+    display: none;
+
+}
+
+input[type = "submit"]{
+
+    transition: all 0.3s;
+
+    display: block;
+    margin: auto;
+    
+    padding: 15px;
+    width: 200px;
+
+    border: solid white 3px;
+    border-radius: 10px;
+
+    background-color: #ff8a05;
+    color: white;
+
+    font-size: 1.1em;
+
+    cursor: pointer;
+
+    margin-bottom: 50px;
+
+}
+
+input[type = "submit"]:hover{
+
+    transition: all 0.3s;
+
+    color: #ff5400;
+
+    font-weight: 550;
+
+    background-image: none;
+
+    background-color: white;
+
+}
+
 @media screen and (max-width: 700px) {
     
     .plano{
@@ -136,8 +187,9 @@ main{
 
     .image{
 
-        border-bottom-left-radius: 0px;
+        width: 100%;
 
+        border-bottom-left-radius: 0px;
         border-top-right-radius: 15px;
 
     }
@@ -152,10 +204,18 @@ main{
     
     }
 
+    .description, .image {
+        
+        box-sizing: border-box;
+
+    }
+
     .description{
 
         padding: 10px;
         border: solid 3px white;
+
+        width: 100%;
     
         border-top-right-radius: 0px;
         border-bottom-right-radius: 15px;
