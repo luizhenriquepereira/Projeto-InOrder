@@ -79,11 +79,13 @@ body{
 
     width: 250px;
     height: 40px;
-    border-radius: 15px;
+    border-radius: 10px;
     padding-left: 10px;
 
     margin-top: 10px;
-    border: 2px solid #2b2a2ac0;    
+    border: 2px solid #2b2a2ac0;  
+    
+    transition: all 0.7s;
 
 }
 
@@ -148,7 +150,7 @@ body{
 
 #bot2{
 
-    margin-top: 40px;
+    margin-top: 20px;
 
 }
 
@@ -190,6 +192,106 @@ body{
     margin-bottom: 15px;
 
 }
+
+.errorText{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 250px;
+    display: block;
+    margin: auto;
+
+    padding-left: 10px;
+
+    text-align: left;
+
+    font-size: 0.8em;
+
+    color: red;
+
+    display: none;
+
+}
+
+
+/*ESTILIZAÇÃO INPUT RADIO*/
+
+.radioBox{
+
+    display: flex;
+    justify-content: space-around;
+
+    margin: auto;
+
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    width: 200px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    transition: all 0.7s;
+
+}
+
+.radioBox p{
+
+    color: #ff5400;
+    cursor: pointer;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    border: 1px solid rgba(0, 0, 0, 0.596);
+
+}
+
+.radioBox p:hover{
+
+    border: solid 1px #ff5400;
+
+}
+
+.radioBox input{
+
+    width: 50px;
+    display: none;
+    
+}
+
+#garcomText{
+
+    border-radius: 5px;
+    padding: 5px;
+
+    background-color: white;
+
+    font-weight: 900;
+
+    transition: all 0.3s;
+
+}   
+
+#cozinhaText{
+
+    border-radius: 5px;
+    padding: 5px;
+
+    background-color: white;
+
+    font-weight: 900;
+
+    transition: all 0.3s;
+
+}
+
+#errorRadio{
+
+    text-align: center;
+
+}
+
+/*FIM ESTILIZAÇÃO INPUT RADIO*/
 
 img.eye {
     z-index: 2;

@@ -270,6 +270,12 @@ main h2{
 
 }
 
+#itemWrapper{
+
+    display: none;
+
+}
+
 .sectionTabelaCardapio h1{
 
     font-size: 1em;
@@ -295,7 +301,7 @@ main h2{
 
     color: white;
     
-    line-height: 154px;
+    line-height: 150px;
     font-size: 7.5em;
 
 }
@@ -332,7 +338,7 @@ main h2{
 
 }
 
-.secWrapper > section.sectionTabelaCardapio{
+.secWrapper  section.sectionTabelaCardapio{
 
     transition: all 0.5s;
 
@@ -342,7 +348,7 @@ main h2{
 
 }
 
-.secWrapper > section.sectionTabelaCardapioAdition{
+.secWrapper  section.sectionTabelaCardapioAdition{
 
     transition: all 0.5s;
 
@@ -542,7 +548,7 @@ main h2{
 
     color: gray;
     
-    line-height: 154px;
+    line-height: 150px;
     font-size: 4em;
 
 }
@@ -574,14 +580,13 @@ main h2{
     margin: auto;
     margin-top: 10px;
 
-    height: 50px;
-    width: 150px;
+    height: 45px;
+    width: 140px;
 
     cursor: pointer;
 
     border: hidden;
-    border-radius: 15px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.445);
+    border-radius: 10px;
 
     background-color: #ff6200;
     color: white;
@@ -594,7 +599,7 @@ main h2{
 
     transition: all 0.3s;
 
-    border: solid 3px #ff6200;
+    border: solid 1px rgba(0, 0, 0, 0.664);
     background-color: white;
     color: #ff6200;
 

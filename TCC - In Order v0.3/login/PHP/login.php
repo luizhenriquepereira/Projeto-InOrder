@@ -11,9 +11,7 @@
 
     <title>InOrder - Entrando</title>
 </head>
-<body>
-
-
+<body>	
 
 <?php
 

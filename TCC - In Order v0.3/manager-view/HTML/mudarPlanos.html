@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/mudarPlanos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />  
+
+    <title>InOrder - Aterar Plano</title>
+
+</head>
+<body>
+
+    <h1>Selecione seu novo Plano:</h1>
+
+<main>
+
+    <section class="plano" onclick="activeSelfService()" id="iself">
+
+        <div class="image">
+
+            <img src="../IMAGENS/icon.png" alt="">
+
+        </div>
+
+        <div class="description">
+
+            <h1>Self-Service</h1>
+
+            <ul>
+
+                <li>Customize um cardápio funcional para clientes</li>
+                <li>Acesso ao cardápio para até 10 garçons</li><br>
+
+            </ul>
+
+            <h1 class="price">Grátis</h1>
+
+        </div>
+
+    </section>
+    <section class="plano" onclick="activeLaCarte()" id="ilacarte">
+
+        <div class="image">
+
+            <img src="../IMAGENS/icon.png" alt="">
+
+        </div>
+
+        <div class="description">
+
+            <h1>La carte</h1>
+
+            <ul>
+
+                <li>Customize um cardápio funcional para clientes</li>
+                <li>Acesso ao cardápio para até 5 garçons</li> 
+                <li>Sistema de  gerenciamento de pedidos</li>
+
+            </ul>
+
+            <h1 class="price">R$ 20,00 p/ mês</h1>
+
+        </div>
+
+    </section>
+    <section class="plano" onclick="activeMaitre()" id="imaitre">
+
+        <div class="image">
+
+            <img src="../IMAGENS/icon.png" alt="">
+
+        </div>
+
+        <div class="description">
+
+            <h1>Maître</h1>
+
+            <ul>
+
+                <li>Customize um cardápio funcional para clientes</li>
+                <li>Acesso ao cardápio para até 10 garçons</li> 
+                <li>Sistema de  gerenciamento de pedidos</li>
+
+            </ul>
+
+            <h1 class="price">R$ 25,00 p/ mês</h1>
+
+        </div>
+
+    </section>
+    <section class="plano" onclick="activeMichellin()"id="imichellin">
+
+        <div class="image">
+
+            <img src="../IMAGENS/icon.png" alt="">
+
+        </div>
+
+        <div class="description">
+
+            <h1>Michellin</h1>
+
+            <ul>
+
+                <li>Customize um cardápio funcional para clientes</li>
+                <li>Acesso ao cardápio para número ilimitados de garçons</li> 
+                <li>Sistema de  gerenciamento de pedidos</li>
+
+            </ul>
+
+            <h1 class="price">R$ 35,00 p/ mês</h1>
+
+        </div>
+
+    </section>
+    
+    <form action="#" method="post">
+
+        <fieldset id="field">
+            <input type="radio" name="planOption" id="selfService">
+            <input type="radio" name="planOption" id="laCarte">
+            <input type="radio" name="planOption" id="maitre">
+            <input type="radio" name="planOption" id="michellin">
+        </fieldset>
+
+        <input type="submit" value="CONFIRMAR">
+
+    </form>
+
+</main>
+
+
+<script>
+
+    var selfService = document.getElementById("selfService");
+    var laCarte = document.getElementById("laCarte");
+    var maitre = document.getElementById("maitre");
+    var michellin = document.getElementById("michellin");
+
+    var planSelfService = document.getElementById("iself");
+    var planLaCarte = document.getElementById("ilacarte");
+    var planMaitre = document.getElementById("imaitre");
+    var planMichellin = document.getElementById("imichellin");
+
+    var planos = document.getElementsByClassName("plano");
+
+    function activeSelfService(){
+
+        selfService.checked = true;
+
+        planSelfService.style.opacity = 1;
+
+        planLaCarte.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeLaCarte(){
+
+        laCarte.checked = true;
+
+        planLaCarte.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeMaitre(){
+
+        maitre.checked = true;
+
+        planMaitre.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planLaCarte.style.opacity = 0.5;
+        planMichellin.style.opacity = 0.5;
+
+    }
+
+    function activeMichellin(){
+
+        michellin.checked = true;
+
+        planMichellin.style.opacity = 1;
+
+        planSelfService.style.opacity = 0.5;
+        planLaCarte.style.opacity = 0.5;
+        planMaitre.style.opacity = 0.5;
+
+    }
+
+</script>
+</body>
+</html> 

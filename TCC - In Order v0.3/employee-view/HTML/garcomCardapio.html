@@ -7,33 +7,49 @@
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />   
     <link rel="stylesheet" href="../CSS/garcomCardapio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
+
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
 
     <title>Cardápio - InOrder</title>
     
 </head>
 <body>
     
-    <header>
+    <header id="header">
     
-        <div class="headerBox">
+        <div class="headerWrapper">
+
+            <div class="headerBox">
             
-            <a href="perfil.html"><img id="imagemPerfil" src="../IMAGENS/icons8-menu-bar-100.png" alt="" ></a>
+                <a href="garcomPerfil.html">
+                    <span class="material-symbols-outlined" id="perfil">
+                    account_circle
+                    </span>
+                </a>
+            </div>
+            <div id="navBox">
+            </div>
+            <div class="headerBox">
+                <a href="perfil.html">
+                    <span class="material-symbols-outlined" id="config">
+                    notifications
+                    </span>
+                </a>
+            </div>
 
         </div>
 
-        <div id="navBox">
+        <div class="optionList" id="opList">
 
-            <nav>
-                
-                    <span><a id="currentPlace" href="#">Cardápio</a></span>
-                
-            </nav> 
+            <span onclick="scrollPratos(); closeOpList()">Pratos Principais</span>
 
         </div>
+        <div class="setaDiv">
 
-        <div class="headerBox">
-
-            <a href="#"><img id="imagemNotificacao" src="../IMAGENS/bell-regular-100.png" alt=""></a>
+            <span class="material-symbols-outlined" id="setaCima" onclick="showOptionList()">
+                expand_circle_down
+            </span>
 
         </div>
     
@@ -41,9 +57,9 @@
     <main>
 
         <div id="topMain">
-            <h1>Cardápio</h1>
-            <hr>
+
             <h2>Mesa selecionada: <span id="tableNumber">--</span></h2>
+
         </div>
 
         <table class="cardapio" id="cardapio">
@@ -59,9 +75,14 @@
             
             <tr>
 
-                <th>Produto</th>
+                <th id="quinaLT">Produto</th>
                 <th>Preço</th>
-                <th>Quantidade</th>
+                <th id="quinaRT">Quantidade</th>
+
+            </tr>
+            <tr>
+
+                <th colspan="3" id="pratosPrincipais">Pratos Principais</th>
 
             </tr>
             <tr>
@@ -136,7 +157,7 @@
             </tr>
             <tr>
 
-                <th class="imageCell">
+                <th class="imageCell" id="quinaLB">
                     <span class="material-symbols-outlined" id="close" onclick="">
                         close
                     </span>
@@ -148,7 +169,7 @@
                     </span> 
                 </th>
 
-                <th class="imageCell" id="done" >
+                <th class="imageCell" id="quinaRB" >
                     <span class="material-symbols-outlined" onclick="checkMark()">
                         done
                     </span>
@@ -164,16 +185,16 @@
 
             <div class="gridContainer">
 
-                <div class="gridItem" id="mesa01" onclick="cliqueMesa01()">1</div>
-                <div class="gridItem" id="mesa02" onclick="cliqueMesa02()">2</div>
-                <div class="gridItem" id="mesa03" onclick="cliqueMesa03()">3</div>
-                <div class="gridItem" id="mesa04" onclick="cliqueMesa04()">4</div>
-                <div class="gridItem" id="mesa05" onclick="cliqueMesa05()">5</div>
-                <div class="gridItem" id="mesa06">6</div>
-                <div class="gridItem" id="mesa07">7</div>
-                <div class="gridItem" id="mesa08">8</div>
-                <div class="gridItem" id="mesa09">9</div>
-                <div class="gridItem" id="mesa010">10</div>
+                <button class="gridItem" id="mesa01" value="1" onclick="cliqueMesa()">1</button>
+                <button class="gridItem" id="mesa02" value="2" onclick="cliqueMesa()">2</button>
+                <button class="gridItem" id="mesa03" value="3" onclick="cliqueMesa()">3</button>
+                <button class="gridItem" id="mesa04" value="4" onclick="cliqueMesa()">4</button>
+                <button class="gridItem" id="mesa05" value="5" onclick="cliqueMesa()">5</button>
+                <button class="gridItem" id="mesa06" value="6" onclick="cliqueMesa()">6</button>
+                <button class="gridItem" id="mesa07" value="7" onclick="cliqueMesa()">7</button>
+                <button class="gridItem" id="mesa08" value="8" onclick="cliqueMesa()">8</button>
+                <button class="gridItem" id="mesa09" value="9" onclick="cliqueMesa()">9</button>
+                <button class="gridItem" id="mesa010" value="10" onclick="cliqueMesa()">10</button>
 
             </div>
 
@@ -187,19 +208,98 @@
         </div>
 
     </main>
+    <footer>
+
+        <div class="flexChild" id="sobre">
+
+            <img src="../IMAGENS/logobranca.png" alt="Logo InOrder">
+            <p>O InOrder é um site criado para o gerenciamento de pedidos de estabelecimentos alimentícios, viabilizando a aceleração e diminuição de atrasos e problemas na entrega dos mesmos.</p>
+
+
+        </div>
+        <div class="flexChild" id="blog">
+
+            <h1>Outros</h1>
+
+            <ul>
+
+                <li><a href=""><p>Entre em contato</p></a></li>
+                <li><a href=""><p>Central de Ajuda</p></a></li>
+                <li><a href=""><p>Sobre nós</p></a></li>
+                
+
+            </ul>
+
+        </div>
+        <div class="flexChild" id="acompanhe">
+
+            <h1 id="cssEstupido">Nos acompanhe</h1>
+            
+            <ul>
+
+                <li><a href=""><i class="fa-brands fa-twitter"></i></a>
+                <li><a href=""><i class="fa-brands fa-instagram"></i></a>
+                <li><a href=""><i class="fa-brands fa-facebook"></i></a>
+
+            </ul>
+
+        </div>
+
+    </footer>
     <script>
 
-        var tableSelected;
+        var tableSelected = false;
+
+        function scrollPratos(){
+
+            window.print();
+
+            var element = document.querySelector('#pratosPrincipais');
+
+            element.scrollIntoView({
+
+                behavior: "smooth",
+                block: "center"
+
+            });
+
+        }
+
+        function closeOpList(){
+
+            document.getElementById("opList").style.display = "none";
+            document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+            document.getElementById("header").style.position = "block";
+
+        }
+
+        function showOptionList(){
+
+            if(document.getElementById("opList").style.display == "" || document.getElementById("opList").style.display == "none"){
+
+                 document.getElementById("opList").style.display = "block";
+                 document.getElementById("setaCima").innerHTML = "expand_circle_up";
+
+             }
+             else{
+
+                document.getElementById("opList").style.display = "none";
+                document.getElementById("setaCima").innerHTML = "expand_circle_down";
+
+             }
+
+        }
 
         function checkMark(){
 
-            if(tableSelected != true){
+            if(tableSelected === false){
 
                 alert ("Mesa não selecionada!");
 
             }
             
-            if(tableSelected == true){
+            else{
 
                 alert ("Bão");
 
@@ -225,22 +325,12 @@
 
         }
 
-        function cliqueMesa01(){
+        function cliqueMesa(){
 
-            document.getElementById("tableNumber").innerHTML = "01";
-
-            document.getElementById("tableSelector").style.display = "none";
-            document.getElementById("tableSelectorCloser").style.display = "none";
-            document.getElementById("cardapio").style.display = "table";
-            document.getElementById("topMain").style.display = "block";
-
+            var target = event.target.value;
             tableSelected = true;
 
-        }
-
-        function cliqueMesa02(){
-
-            document.getElementById("tableNumber").innerHTML = "02";
+            document.getElementById("tableNumber").innerHTML = target;
 
             document.getElementById("tableSelector").style.display = "none";
             document.getElementById("tableSelectorCloser").style.display = "none";
@@ -248,39 +338,6 @@
             document.getElementById("topMain").style.display = "block";
 
         }
-        function cliqueMesa03(){
-
-            document.getElementById("tableNumber").innerHTML = "03";
-
-            document.getElementById("tableSelector").style.display = "none";
-            document.getElementById("tableSelectorCloser").style.display = "none";
-            document.getElementById("cardapio").style.display = "table";
-            document.getElementById("topMain").style.display = "block";
-
-        }
-
-        function cliqueMesa04(){
-
-            document.getElementById("tableNumber").innerHTML = "04";
-
-            document.getElementById("tableSelector").style.display = "none";
-            document.getElementById("tableSelectorCloser").style.display = "none";
-            document.getElementById("cardapio").style.display = "table";
-            document.getElementById("topMain").style.display = "block";
-
-        }
-        function cliqueMesa05(){
-
-            document.getElementById("tableNumber").innerHTML = "05";
-
-            document.getElementById("tableSelector").style.display = "none";
-            document.getElementById("tableSelectorCloser").style.display = "none";
-            document.getElementById("cardapio").style.display = "table";
-            document.getElementById("topMain").style.display = "block";
-
-        }
-
-        
 
     </script>
 

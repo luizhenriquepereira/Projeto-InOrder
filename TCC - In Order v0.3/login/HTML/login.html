@@ -18,10 +18,13 @@
     
             <h1>FAZER LOGIN</h1>
     
-            <form action="../PHP/login.php" method="post">
+            <form action="../../PHP/login.php" method="post" name="form" id="form">
     
-                <input type="text" name="txtuser" placeholder="CPF" required> <br>
+                <input type="text" name="txtuser" placeholder="CPF ou EMAIL" id="iuser" required>
+                <p class="errorText" id="errorUser">Preencha este campo primeiro.</p>
+
                 <input type="password" name="txtpassword" id="isenha" placeholder="SENHA" required> <br>
+                <p class="errorText" id="errorPassword">Preencha este campo primeiro.</p>
 
                 <label for="imudarSenha" class="grayText" onclick="mostrarSenha()">
                     <input type="checkbox" name="mudarSenha" id="imudarSenha" class="mudarSenha" onclick="mostrarSenha()">
@@ -29,7 +32,7 @@
                 </label>
                 <br><br>
                 
-                <input type="submit" name="envia" value="ENTRAR" class="enviaBotao">    
+                <input type="button" name="envia" value="ENTRAR" class="enviaBotao" onclick="validateForm()">    
 
                 
                 
@@ -54,13 +57,37 @@
             if(document.getElementById("imudarSenha").checked){
 
                 document.getElementById("isenha").type =  "text";
-                document.getElementById("iConfirmarSenha").type =  "text";
 
             }
             else{
 
                 document.getElementById("isenha").type =  "password";
-                document.getElementById("iConfirmarSenha").type =  "password";
+
+            }
+
+        }
+
+        function validateForm(){
+
+            var user = document.forms["form"]["txtuser"].value;
+            var senha = document.forms["form"]["txtpassword"].value;
+
+            if(user == null || user == ""){
+
+                document.getElementById("iuser").style.borderColor = "red";
+                document.getElementById("errorUser").style.display = "block";
+
+            }
+            if(senha == null || senha == ""){
+
+                document.getElementById("isenha").style.borderColor = "red";
+                document.getElementById("errorPassword").style.display = "block";
+
+            }
+
+            else{
+
+                document.getElementById("form").submit();
 
             }
 

@@ -41,7 +41,7 @@
             <div class="headerBox">
                 <a href="perfil.html">
                     <span class="material-symbols-outlined" id="config">
-                    settings
+                        notifications
                     </span>
                 </a>
             </div>
@@ -89,8 +89,6 @@
 
         <div class="secWrapper" id="sectionWrapper">
 
-            <h1>Pratos Principais: Itens</h1>
-
             <!-- ITEM COMEÇA // ADIÇÃO  --> 
             <section class="sectionTabelaCardapioAdition" onclick="window.location.href = 'criarProduto.html'">
                 
@@ -102,6 +100,7 @@
             </section>
             <!-- ITEM TERMINA --> 
 
+            <section id="itemWrapper"><!-- ITEMWRAPPER --> 
             <!-- ITEM COMEÇA -->
             <section class="sectionTabelaCardapio">
                 
@@ -176,12 +175,13 @@
                     </tr>
                 </table>
             </section>  
-            <!-- ITEM TERMINA -->  
-            
+            <!-- ITEM TERMINA -->
+            </section> <!-- FIM ITEMWRAPPER -->
+
             <section class="sectionPuller" onclick="showSection()">
 
                 <span class="material-symbols-rounded" id="expandIcon">
-                    expand_circle_up
+                    expand_circle_down
                 </span>
 
             </section>
@@ -245,6 +245,27 @@
 
              }
 
+        }
+
+        function showSection(){
+
+            var items = document.getElementById("itemWrapper");
+            var seta = document.getElementById("expandIcon");
+
+            if (items.style.display === "none" || items.style.display === ""){
+
+                seta.innerHTML = "expand_circle_up";
+                items.style.display = "block";
+
+            }
+
+            else{
+
+                seta.innerHTML = "expand_circle_down";
+                items.style.display = "none";
+
+            }
+            
         }
 
         // function showSection(){

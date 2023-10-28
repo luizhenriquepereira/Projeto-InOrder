@@ -21,31 +21,36 @@
     
             <h1>CADASTRE-SE</h1>
     
-            <form action="../PHP/recebeCadastro.php" method="post">
+            <form action="../PHP/recebeCadastro.php" method="post" name="box" id="form">
     
                 <label for="iemail">
-                    <input type="text" name="txtemail" placeholder="E-MAIL" id="iemail" required>
-                </label> <br>
+                    <input type="text" name="txtemail" placeholder="E-MAIL" id="iemail" >
+                    <p class="errorText" id="errorEmail">Preencha este campo primeiro.</p>
+                </label>
 
                 <label for="iuser">
-                    <input type="text" name="txtuser" placeholder="NOME DE USUÁRIO" id="iuser" required>
-                </label> <br>
+                    <input type="text" name="txtuser" placeholder="NOME DE USUÁRIO" id="iuser" >
+                    <p class="errorText" id="errorUser">Preencha este campo primeiro.</p>
+                </label>
 
                 <label for="isenha">
                     <input type="password" name="txtpassword" id="isenha" placeholder="SENHA"
-                    required>
+                    >
+                    <p class="errorText" id="errorSenha">Preencha este campo primeiro.</p>
+                    <p class="errorText" id="notEqualPassword">As senhas não coincidem.</p>
                 </label>
                 
-                <label for="ipasswordConfirm">
-                    <input type="password" name="passwordConfirm" id="iConfirmarSenha" placeholder="CONFIRMAR SENHA" required>
-                </label>
-                <br>
+                <label for="iPasswordConfirm">
+                    <input type="password" name="passwordConfirm" id="iPasswordConfirm" placeholder="CONFIRMAR SENHA" >
+                    <p class="errorText" id="errorPasswordConfirm">Preencha este campo primeiro.</p>
+                    <p class="errorText" id="notEqualPasswordConfirm">As senhas não coincidem.</p>
+                </label><br>
 
                 <label for="imudarSenha" class="grayText" onclick="mostrarSenha()">
                     <input type="checkbox" name="mudarSenha" id="imudarSenha" class="mudarSenha" onclick="mostrarSenha()">
                     Mostrar senha
                 </label>
-                <br><br>
+                <br>
                 
                 <input type="button" name="Envia" value="CONTINUAR" onclick="mudarBox()">
                    
@@ -67,26 +72,26 @@
     
 
                 <label for="iempresa">
-                    <input type="text" name="txtempresa" placeholder="NOME DA EMPRESA" id="iempresa" required>
-                </label> 
-                <br>
+                    <input type="text" name="txtempresa" placeholder="NOME DA EMPRESA" id="iempresa" title="" >
+                    <p class="errorText" id="errorEmpresa">Preencha este campo primeiro.</p>
+                </label>
 
                 <label for="icpf">
-                    <input type="text" name="txtcpf" placeholder="CPF" id="icpf" required>
+                    <input type="text" name="txtcpf" placeholder="CPF" id="icpf" maxlength="14" onkeydown="mascara_cpf()">
+                    <p class="errorText" id="errorCpf">Preencha este campo primeiro.</p>
                 </label> 
-                <br>
 
                 <label for="itel">
-                    <input type="tel" name="tel" placeholder="NÚMERO DE TELEFONE" id="itel" required>
+                    <input type="tel" name="tel" placeholder="NÚMERO DE TELEFONE" maxlength="14" id="itel">
+                    <p class="errorText" id="errorTel">Preencha este campo primeiro.</p>
                 </label>
-                <br>
 
                 <label for="icnpj">
-                    <input type="text" name="txtcnpj" placeholder="CNPJ" id="icnpj" required>
-                </label> 
-                <br>
+                    <input type="text" name="txtcnpj" placeholder="CNPJ" id="icnpj" maxlength="14" >
+                    <p class="errorText" id="errorCnpj">Preencha este campo primeiro.</p>
+                </label>
                 
-                <input type="submit" name="Envia" value="CONFIRMAR" id="bot2">
+                <input type="button" name="Envia" value="CONFIRMAR" id="bot2" onclick="validateForm()">
                    
             </form>
     
@@ -104,8 +109,62 @@
 
         function mudarBox(){
 
-            document.getElementById("loginBox1").style.display = "none";
-            document.getElementById("loginBox2").style.display = "block";
+            var email = document.forms["box"]["txtemail"].value;
+            var user = document.forms["box"]["txtuser"].value;
+            var pass = document.forms["box"]["txtpassword"].value;
+            var passConfirm = document.forms["box"]["passwordConfirm"].value;
+
+            if(email == null || email == ""){
+
+                document.getElementById("iemail").style.borderColor = "red";
+                document.getElementById("errorEmail").style.display = "block";
+
+            }
+            if(user == null || user == ""){
+
+                document.getElementById("iuser").style.borderColor = "red";
+                document.getElementById("errorUser").style.display = "block";
+
+            }
+            if(pass == null || pass == ""){
+
+                console.log("pass is null");
+                document.getElementById("isenha").style.borderColor = "red";
+                document.getElementById("errorSenha").style.display = "block";
+
+            }
+            if(passConfirm == null || passConfirm == ""){
+
+                console.log("pass confirm is null")
+                document.getElementById("iPasswordConfirm").style.borderColor = "red";
+                document.getElementById("errorPasswordConfirm").style.display = "block";
+
+            }
+            
+            else if(pass != passConfirm){
+
+                document.getElementById("errorPasswordConfirm").style.display = "none";
+                document.getElementById("errorSenha").style.display = "none";
+
+                document.getElementById("iPasswordConfirm").style.borderColor = "red";
+                document.getElementById("isenha").style.borderColor = "red";
+
+                document.getElementById("notEqualPassword").style.display = "block";
+                document.getElementById("notEqualPasswordConfirm").style.display = "block";
+
+            }
+
+            else if(email != null && email != "" 
+            && user != null && user != "" 
+            && pass != null && pass != "" 
+            && passConfirm != null && passConfirm != ""){
+
+                console.log("all is full")
+
+                document.getElementById("loginBox1").style.display = "none";
+                document.getElementById("loginBox2").style.display = "block";
+
+            }
 
         }
 
@@ -113,19 +172,76 @@
 
             if(document.getElementById("imudarSenha").checked){
 
-                document.getElementById("isenha").type =  "text";
-                document.getElementById("iConfirmarSenha").type =  "text";
+                document.getElementById("isenha").type = "text";
+                document.getElementById("iPasswordConfirm").type = "text";
 
             }
             else{
 
-                document.getElementById("isenha").type =  "password";
-                document.getElementById("iConfirmarSenha").type =  "password";
+                document.getElementById("isenha").type = "password";
+                document.getElementById("iPasswordConfirm").type = "password";
 
             }
 
         }
 
+        function validateForm(){
+
+            var empresa = document.forms["box"]["txtempresa"].value;
+            var cpf = document.forms["box"]["txtcpf"].value;
+            var tel = document.forms["box"]["tel"].value;
+            var cnpj = document.forms["box"]["txtcnpj"].value;
+
+            if(empresa == null || empresa == ""){
+
+                document.getElementById("iempresa").style.borderColor = "red";
+                document.getElementById("errorEmpresa").style.display = "block";
+
+            }
+            if(cpf == null || cpf == ""){
+
+                document.getElementById("icpf").style.borderColor = "red";
+                document.getElementById("errorCpf").style.display = "block";
+
+            }
+            if(tel == null || tel == ""){
+
+                console.log("pass is null");
+                document.getElementById("itel").style.borderColor = "red";
+                document.getElementById("errorTel").style.display = "block";
+
+            }
+            if(cnpj == null || cnpj == ""){
+
+                console.log("pass confirm is null")
+                document.getElementById("icnpj").style.borderColor = "red";
+                document.getElementById("errorCnpj").style.display = "block";
+
+            }
+
+            else{
+
+                document.getElementById("form").submit();
+
+            }
+
+        }
+
+        function mascara_cpf(){
+
+            var maskcpf = document.getElementById('icpf')
+
+                if(maskcpf.value.length == 3 || maskcpf.value.length == 7){
+
+                    maskcpf.value += "."
+
+                } 
+                else if (maskcpf.value.length == 11) {
+
+                    maskcpf.value += "-"
+
+                }
+        }
     </script>
 
 </body>

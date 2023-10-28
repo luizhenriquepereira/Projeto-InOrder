@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/cadastro.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
+
+    <title>Cadastro - InOrder</title>
+
+</head>
+<body>
+    
+    <section class="outerBox">
+
+        <section class="loginBox" id="loginBox1"> 
+           
+            <img class="logoLogin" src="../IMAGENS/logo.png" alt="">
+
+            <h1>CADASTRO</h1>
+    
+            <form action="../PHP/recebeCadastro.php" method="post" name="box" id="form">
+
+                <label for="inome">
+                    <input type="text" name="txtnome" placeholder="NOME DO FUNCIONÁRIO" id="inome" title="" >
+                    <p class="errorText" id="errorNome">Preencha este campo primeiro.</p>
+                </label>
+
+                <label for="icpf">
+                    <input type="text" name="txtcpf" placeholder="CPF" id="icpf" maxlength="11" >
+                    <p class="errorText" id="errorCpf">Preencha este campo primeiro.</p>
+                </label> 
+
+                <label for="iemail">
+                    <input type="email" name="txtemail" placeholder="EMAIL" id="iemail">
+                    <p class="errorText" id="errorEmail">Preencha este campo primeiro.</p>
+                </label>
+
+                <label for="isenha">
+                    <input type="password" name="txtsenha" placeholder="SENHA" id="isenha">
+                    <p class="errorText" id="errorSenha">Preencha este campo primeiro.</p>
+                    <p class="errorText" id="notEqualPassword">As senhas não coincidem.</p>
+                </label>
+
+                <label for="iPasswordConfirm">
+                    <input type="password" name="passwordConfirm" placeholder="CONFIRMAR SENHA" id="iPasswordConfirm">
+                    <p class="errorText" id="errorConfirmarSenha">Preencha este campo primeiro.</p>
+                    <p class="errorText" id="notEqualPasswordConfirm">As senhas não coincidem.</p>
+                </label><br>
+
+                <label for="imudarSenha" class="grayText" onclick="mostrarSenha()">
+                    <input type="checkbox" name="mudarSenha" id="imudarSenha" class="mudarSenha" onclick="mostrarSenha()">
+                    Mostrar senha
+                </label>
+
+                <h1>Cadastrar como:</h1>
+
+                <div class="radioBox" id="radioBox">
+
+                    <label for="igarcom">
+                        <p id="garcomText" onclick="radioGarcom()" >Garçom</p>
+                        <input type="radio" name="radio" value="1" id="igarcom"> <!-- CADASTRANDO GARÇOM -->
+                    </label>
+
+                    <label for="icozinha">
+                        <p id="cozinhaText" onclick="radioCozinha()" >Cozinha</p>
+                        <input type="radio" name="radio" value="2" id="icozinha"> <!-- CADASTRANDO COZINHA -->
+                    </label>
+
+                </div>  
+                <p class="errorText" id="errorRadio">Selecione o perfil a ser cadastrado.</p>
+
+                <input type="button" name="Envia" value="CONCLUIR" id="bot2" onclick="validateForm()">
+                   
+            </form>
+            <br><br>
+        </section>
+
+    </section>
+
+    <script> 
+
+    var radioWasChecked = false;
+
+        function mostrarSenha(){
+
+            if(document.getElementById("imudarSenha").checked){
+
+                document.getElementById("isenha").type = "text";
+                document.getElementById("iPasswordConfirm").type = "text";
+
+            }
+            else{
+
+                document.getElementById("isenha").type = "password";
+                document.getElementById("iPasswordConfirm").type = "password";
+
+            }
+
+        }
+
+        function validateForm(){
+
+            console.log(radioWasChecked)
+
+            var nome = document.forms["box"]["txtnome"].value;
+            var cpf = document.forms["box"]["txtcpf"].value;
+            var email = document.forms["box"]["txtemail"].value;
+            var senha = document.forms["box"]["txtsenha"].value;
+            var confirmarSenha = document.forms["box"]["passwordConfirm"].value;
+
+            
+
+            if(nome == null || nome == ""){
+
+                document.getElementById("inome").style.borderColor = "red";
+                document.getElementById("errorNome").style.display = "block";
+
+            }
+            if(cpf == null || cpf == ""){
+
+                document.getElementById("icpf").style.borderColor = "red";
+                document.getElementById("errorCpf").style.display = "block";
+
+            }
+            if(email == null || email == ""){
+
+                console.log("email is null");
+                document.getElementById("iemail").style.borderColor = "red";
+                document.getElementById("errorEmail").style.display = "block";
+
+            }
+            if(senha == null || senha == ""){
+
+                console.log("pass confirm is null")
+                document.getElementById("isenha").style.borderColor = "red";
+                document.getElementById("errorSenha").style.display = "block";
+
+                document.getElementById("notEqualPassword").style.display = "none";
+
+            }
+            if(confirmarSenha == null || confirmarSenha == ""){
+
+                console.log("pass confirm is null")
+                document.getElementById("iPasswordConfirm").style.borderColor = "red";
+                document.getElementById("errorConfirmarSenha").style.display = "block";
+
+                document.getElementById("notEqualPasswordConfirm").style.display = "none";
+
+            }
+            if(radioWasChecked == false){
+
+                document.getElementById("errorRadio").style.display = "block";
+
+            }
+            if(senha != confirmarSenha){
+
+                document.getElementById("errorConfirmarSenha").style.display = "none";
+                document.getElementById("errorSenha").style.display = "none";
+
+                document.getElementById("iPasswordConfirm").style.borderColor = "red";
+                document.getElementById("isenha").style.borderColor = "red";
+
+                document.getElementById("notEqualPassword").style.display = "block";
+                document.getElementById("notEqualPasswordConfirm").style.display = "block";
+
+            }
+
+            if(email != null && email != "" && 
+            nome != null && nome != "" && 
+            senha != null && senha != "" && 
+            confirmarSenha != null && confirmarSenha != "" && 
+            cpf != null && cpf != "" && 
+            radioWasChecked == true){
+
+                document.getElementById("form").submit();
+
+            }
+
+        }
+
+        function radioGarcom(){
+
+            console.log("radioGArcom")
+
+            var element = document.getElementById("garcomText");
+            var other = document.getElementById("cozinhaText");
+
+            element.style.color = "white";
+            element.style.backgroundColor = "#ff5400";
+            element.style.borderColor = "transparent";
+
+            other.style.color = "#ff5400";
+            other.style.backgroundColor = "white";
+            other.style.borderColor = "rgba(0, 0, 0, 0.596)";
+
+            radioWasChecked = true;
+
+        }
+
+        function radioCozinha(){
+
+            console.log("radiocozinah")
+
+            var element = document.getElementById("cozinhaText");
+            var other = document.getElementById("garcomText");
+
+            element.style.color = "white"
+            element.style.backgroundColor = "#ff5400"
+            element.style.borderColor = "transparent";
+
+            other.style.color = "#ff5400";
+            other.style.backgroundColor = "white";
+            other.style.borderColor = "rgba(0, 0, 0, 0.596)";
+
+            radioWasChecked = true;
+
+        }
+
+    </script>
+
+</body>
+</html>

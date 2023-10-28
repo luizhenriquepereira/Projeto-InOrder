@@ -384,7 +384,7 @@ h2{
 
     height: 110px;
     
-    max-width: 600px;
+    max-width: 100%;
     margin: auto;   
     margin-top: 10px;
 
@@ -413,7 +413,7 @@ h2{
 
     height: 60px;
     
-    max-width: 600px;
+    max-width: 100%;
     margin: auto;   
     margin-top: 10px;
 
@@ -450,7 +450,7 @@ h2{
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
 
-    max-width: 600px;
+    max-width: 100%;
     margin: auto;
 
 }

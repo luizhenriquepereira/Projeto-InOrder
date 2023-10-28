@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../CSS/pedidos.css">
     <link rel="shortcut icon" href="../IMAGENS/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -38,7 +39,7 @@
             <div class="headerBox">
                 <a href="perfil.html">
                     <span class="material-symbols-outlined" id="config">
-                    settings
+                    notifications
                     </span>
                 </a>
             </div>
@@ -63,7 +64,114 @@
     </header>
     <main>
 
-        <h1>Aqui o gerente poderá ter uma visão geral dos pedidos em andamento no estabelecimento.</h1>
+        <h1>Pedidos ativos por ordem</h1>
+
+        <section class="pedidoFechado">
+
+            <h1>Mesa 1</h1>
+            <p class="fechado">Pedido Fechado</p>
+            <p>Horário do pedido: 12h40</p>
+
+            <span class="material-symbols-outlined setaPedido" onclick="showPedido()">
+                menu_open
+            </span>
+
+        </section>
+        <section class="pedidoAberto" id="pedido1">
+
+            <h1>Pedido de Mesa 1 às 12h40</h1>
+            <p class="fechadoAberto">Pedido Fechado</p>
+
+            <div class="pedidoAbertoContent">
+
+                <!-- ITEM SUCO-->
+                <table>
+                    <tr>
+                        <td rowspan="2" class="imageTD">
+                            <div class="image"><img src="../IMAGENS/suco-de-laranja.jpeg" alt="suco de laranja"></div>
+                        </td>
+                        <td class="nome"><h1>Suco de Laranja</h1></td>
+                    </tr>
+                    <tr>
+                        <td><p>Observações: <br> Com açúcar e gelo</p></td>
+                    </tr>
+                </table>
+                <!-- FIM ITEM -->
+
+            </div>
+
+            <span class="material-symbols-rounded setaPedidoAberto" onclick="closePedido()">
+                expand_circle_down
+            </span>
+
+        </section>
+
+
+        <section class="pedidoFechado">
+
+            <h1>Mesa 1</h1>
+            <p class="andamento">Pedido Em Andamento</p>
+            <p>Horário do pedido: 12h30</p>
+
+            <span class="material-symbols-outlined setaPedido" onclick="showPedido2()">
+                menu_open
+            </span>
+
+        </section>
+        <section class="pedidoAberto" id="pedido2">
+
+            <h1>Pedido de Mesa 1 às 12h40</h1>
+            <p class="andamento">Pedido em Andamento</p>
+
+            <div class="pedidoAbertoContent">
+
+                <!-- ITEM SUCO-->
+                <table>
+                    <tr>
+                        <td rowspan="2" class="imageTD">
+                            <div class="image"><img src="../IMAGENS/suco-de-laranja.jpeg" alt="suco de laranja"></div>
+                        </td>
+                        <td class="nome"><h1>Suco de Laranja</h1></td>
+                    </tr>
+                    <tr>
+                        <td><p>Observações: <br> Com açúcar e gelo</p></td>
+                    </tr>
+                </table>
+                <!-- FIM ITEM -->
+                <!-- ITEM FEIJOADA-->
+                <table>
+                    <tr>
+                        <td rowspan="2" class="imageTD">
+                            <div class="image"><img src="../IMAGENS/feijoada-full.jpg" alt="suco de laranja"></div>
+                        </td>
+                        <td class="nome"><h1>Feijoada</h1></td>
+                    </tr>
+                    <tr>
+                        <td><p>Observações: <br>Nenhuma</p></td>
+                    </tr>
+                </table>
+                <!-- FIM ITEM -->
+                <!-- ITEM FEIJOADA-->
+                <table>
+                    <tr>
+                        <td rowspan="2" class="imageTD">
+                            <div class="image"><img src="../IMAGENS/feijoada-full.jpg" alt="suco de laranja"></div>
+                        </td>
+                        <td class="nome"><h1>Feijoada</h1></td>
+                    </tr>
+                    <tr>
+                        <td><p>Observações: <br>Retirar Farofa</p></td>
+                    </tr>
+                </table>
+                <!-- FIM ITEM -->
+
+            </div>
+
+            <span class="material-symbols-rounded setaPedidoAberto" onclick="closePedido2()">
+                expand_circle_down
+            </span>
+
+        </section>
 
     </main>
     <footer>
@@ -121,6 +229,68 @@
                 document.getElementById("setaCima").innerHTML = "expand_circle_down";
 
              }
+
+        }
+
+        function showPedido(){
+
+            var pedido = document.querySelector("#pedido1");
+            var out = document.querySelectorAll(".pedidoFechado, main > h1");
+
+            pedido.style.display = "block";
+
+            out.forEach((element) => {
+
+                element.style.opacity = "0.5";
+                
+            });
+
+
+        }
+
+        function showPedido2(){
+
+            var pedido = document.querySelector("#pedido2");
+            var out = document.querySelectorAll(".pedidoFechado, main > h1");
+
+            pedido.style.display = "block";
+
+            out.forEach((element) => {
+
+                element.style.opacity = "0.5";
+                
+            });
+
+
+        }
+
+        function closePedido(){
+
+            var pedido = document.querySelector("#pedido1");
+            var out = document.querySelectorAll(".pedidoFechado, main > h1");
+
+            pedido.style.display = "none";
+
+            out.forEach((element) => {
+
+                element.style.opacity = "1";
+                
+            });
+
+        }
+
+        function closePedido2(){
+
+            var pedido = document.querySelector("#pedido2   ");
+            var out = document.querySelectorAll(".pedidoFechado, main > h1");
+
+            pedido.style.display = "none";
+
+            out.forEach((element) => {
+
+                element.style.opacity = "1";
+                
+            });
 
         }
 
